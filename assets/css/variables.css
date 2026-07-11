@@ -1,0 +1,26 @@
+:root{
+
+    --bg:#08071B;
+    --bg2:#151236;
+
+    --card:rgba(255,255,255,.08);
+
+    --white:#ffffff;
+
+    --text:#d9d9d9;
+
+    --primary:#8B5CF6;
+
+    --secondary:#5EE7FF;
+
+    --success:#22ff88;
+
+    --gold:#FFD54F;
+
+    --border:rgba(255,255,255,.15);
+
+    --shadow:0 15px 40px rgba(0,0,0,.35);
+
+    --radius:30px;
+
+}
