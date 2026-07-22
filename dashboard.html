@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="MY HISTORY - Create, manage and preserve your memories">
+
+    <title>MY HISTORY | Dashboard</title>
+
+
+    <!-- ==============================
+         GOOGLE FONTS
+    =============================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- ==============================
+         FONT AWESOME
+    =============================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- ==============================
+         GLOBAL CSS
+    =============================== -->
+
+    <link rel="stylesheet"
+          href="assets/css/main.css">
+
+
+    <!-- ==============================
+         DASHBOARD CSS
+    =============================== -->
+
+    <link rel="stylesheet"
+          href="assets/css/pages/dashboard.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         BACKGROUND
+    ================================== -->
+
+    <div class="background">
+
+        <div class="stars"></div>
+
+        <div class="aurora aurora-left"></div>
+
+        <div class="aurora aurora-right"></div>
+
+    </div>
+
+
+
+    <!-- =================================
+         APP CONTAINER
+    ================================== -->
+
+    <div class="app-container">
+
+
+        <!-- =================================
+             SIDEBAR OVERLAY
+        ================================== -->
+
+        <div class="sidebar-overlay"
+             id="sidebarOverlay">
+        </div>
+
+
+
+        <!-- =================================
+             SIDEBAR
+        ================================== -->
+
+        <aside class="sidebar"
+               id="sidebar">
+
+
+            <!-- SIDEBAR HEADER -->
+
+            <div class="sidebar-header">
+
+
+                <!-- LOGO -->
+
+                <a href="dashboard.html"
+                   class="brand">
+
+
+                    <div class="brand-logo">
+
+                        <img src="assets/images/logo/logo.png"
+                             alt="MY HISTORY Logo">
+
+                    </div>
+
+
+                    <div class="brand-info">
+
+                        <h2>MY HISTORY</h2>
+
+                        <span>Memory Studio</span>
+
+                    </div>
+
+
+                </a>
+
+
+                <!-- MOBILE CLOSE -->
+
+                <button class="sidebar-close"
+                        id="sidebarClose"
+                        aria-label="Close sidebar">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- =================================
+                 MAIN NAVIGATION
+            ================================== -->
+
+            <nav class="sidebar-navigation">
+
+
+                <p class="nav-label">
+                    WORKSPACE
+                </p>
+
+
+                <!-- DASHBOARD -->
+
+                <a href="dashboard.html"
+                   class="nav-item active">
+
+                    <span class="nav-icon">
+
+                        <i class="fa-solid fa-house"></i>
+
+                    </span>
+
+                    <span class="nav-text">
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <!-- STORIES -->
+
+                <a href="#"
+                   class="nav-item">
+
+                    <span class="nav-icon">
+
+                        <i class="fa-solid fa-book-open"></i>
+
+                    </span>
+
+                    <span class="nav-text">
+                        My Stories
+                    </span>
+
+                    <span class="nav-badge">
+                        12
+                    </span>
+
+                </a>
+
+
+                <!-- CHARACTERS -->
+
+                <a href="#"
+                   class="nav-item">
+
+                    <span class="nav-icon">
+
+                        <i class="fa-solid fa-users"></i>
+
+                    </span>
+
+                    <span class="nav-text">
+                        Characters
+                    </span>
+
+                </a>
+
+
+                <!-- GALLERY -->
+
+                <a href="#"
+                   class="nav-item">
+
+                    <span class="nav-icon">
+
+                        <i class="fa-solid fa-images"></i>
+
+                    </span>
+
+                    <span class="nav-text">
+                        Gallery
+                    </span>
+
+                </a>
+
+
+                <!-- TIMELINE -->
+
+                <a href="#"
+                   class="nav-item">
+
+                    <span class="nav-icon">
+
+                        <i class="fa-solid fa-timeline"></i>
+
+                    </span>
+
+                    <span class="nav-text">
+                        Timeline
+                    </span>
+
+                </a>
+
+
+
+                <!-- AI STUDIO -->
+
+                <p class="nav-label nav-label-space">
+
+                    CREATIVE TOOLS
+
+                </p>
+
+
+                <a href="#"
+                   class="nav-item ai-nav-item">
+
+                    <span class="nav-icon ai-icon">
+
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                    </span>
+
+                    <span class="nav-text">
+                        AI Studio
+                    </span>
+
+                    <span class="new-badge">
+                        NEW
+                    </span>
+
+                </a>
+
+
+                <a href="#"
+                   class="nav-item">
+
+                    <span class="nav-icon">
+
+                        <i class="fa-solid fa-film"></i>
+
+                    </span>
+
+                    <span class="nav-text">
+                        Animation
+                    </span>
+
+                </a>
+
+
+
+                <!-- =================================
+                     BOTTOM NAVIGATION
+                ================================== -->
+
+                <div class="sidebar-bottom">
+
+
+                    <p class="nav-label">
+                        ACCOUNT
+                    </p>
+
+
+                    <a href="#"
+                       class="nav-item">
+
+                        <span class="nav-icon">
+
+                            <i class="fa-solid fa-user"></i>
+
+                        </span>
+
+                        <span class="nav-text">
+                            Profile
+                        </span>
+
+                    </a>
+
+
+                    <a href="#"
+                       class="nav-item">
+
+                        <span class="nav-icon">
+
+                            <i class="fa-solid fa-gear"></i>
+
+                        </span>
+
+                        <span class="nav-text">
+                            Settings
+                        </span>
+
+                    </a>
+
+
+                    <!-- LOGOUT -->
+
+                    <button class="logout-btn"
+                            id="logoutBtn">
+
+                        <span class="nav-icon">
+
+                            <i class="fa-solid fa-right-from-bracket"></i>
+
+                        </span>
+
+                        <span class="nav-text">
+                            Log Out
+                        </span>
+
+                    </button>
+
+
+                </div>
+
+
+            </nav>
+
+
+            <!-- =================================
+                 USER CARD
+            ================================== -->
+
+            <div class="sidebar-user">
+
+
+                <div class="user-avatar">
+
+                    <img src="assets/images/avatars/user.png"
+                         alt="User Avatar">
+
+                </div>
+
+
+                <div class="user-info">
+
+                    <strong>
+                        Rayhona
+                    </strong>
+
+                    <span>
+                        Creative Member
+                    </span>
+
+                </div>
+
+
+                <button class="user-more"
+                        aria-label="More options">
+
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                </button>
+
+
+            </div>
+
+
+        </aside>
+
+
+
+        <!-- =================================
+             MAIN CONTENT
+        ================================== -->
+
+        <main class="main-content">
+
+
+            <!-- =================================
+                 TOP NAVBAR
+            ================================== -->
+
+            <header class="top-navbar">
+
+
+                <!-- MOBILE MENU -->
+
+                <button class="menu-toggle"
+                        id="menuToggle"
+                        aria-label="Open menu">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+
+                <!-- SEARCH -->
+
+                <div class="search-container">
+
+
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+
+
+                    <input type="search"
+                           id="globalSearch"
+                           placeholder="Search your memories..."
+                           autocomplete="off">
+
+
+                    <span class="search-shortcut">
+                        Ctrl K
+                    </span>
+
+
+                </div>
+
+
+
+                <!-- NAVBAR ACTIONS -->
+
+                <div class="navbar-actions">
+
+
+                    <!-- CREATE -->
+
+                    <button class="quick-create"
+                            id="quickCreate">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        <span>
+                            Create
+                        </span>
+
+                    </button>
+
+
+                    <!-- NOTIFICATIONS -->
+
+                    <button class="icon-button notification-button"
+                            id="notificationButton"
+                            aria-label="Notifications">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="notification-dot"></span>
+
+                    </button>
+
+
+                    <!-- THEME -->
+
+                    <button class="icon-button"
+                            id="themeToggle"
+                            aria-label="Toggle theme">
+
+                        <i class="fa-regular fa-moon"></i>
+
+                    </button>
+
+
+                    <!-- PROFILE -->
+
+                    <button class="navbar-profile"
+                            id="profileButton">
+
+
+                        <img src="assets/images/avatars/user.png"
+                             alt="Rayhona">
+
+
+                        <span>
+                            Rayhona
+                        </span>
+
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+
+                    </button>
+
+
+                </div>
+
+
+            </header>
+
+
+
+            <!-- =================================
+                 DASHBOARD CONTENT
+            ================================== -->
+
+            <div class="dashboard-content">
+
+
+
+                <!-- =================================
+                     WELCOME SECTION
+                ================================== -->
+
+                <section class="welcome-section">
+
+
+                    <div class="welcome-text">
+
+
+                        <span class="welcome-label">
+
+                            <i class="fa-regular fa-sun"></i>
+
+                            YOUR MEMORY SPACE
+
+                        </span>
+
+
+                        <h1>
+
+                            Welcome back,
+                            <span>Rayhona</span> 👋
+
+                        </h1>
+
+
+                        <p>
+
+                            Your stories, memories and special moments
+                            are waiting for you.
+
+                        </p>
+
+
+                    </div>
+
+
+                    <!-- QUICK ACTIONS -->
+
+                    <div class="welcome-actions">
+
+
+                        <button class="primary-button"
+                                id="createStoryButton">
+
+
+                            <i class="fa-solid fa-plus"></i>
+
+
+                            <span>
+                                Create Story
+                            </span>
+
+
+                        </button>
+
+
+                        <button class="secondary-button"
+                                id="aiStudioButton">
+
+
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+
+                            <span>
+                                AI Studio
+                            </span>
+
+
+                        </button>
+
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- =================================
+                     QUICK CREATE CARDS
+                ================================== -->
+
+                <section class="quick-create-section">
+
+
+                    <div class="section-heading">
+
+
+                        <div>
+
+                            <span class="section-overline">
+                                START CREATING
+                            </span>
+
+                            <h2>
+                                Bring your memories to life
+                            </h2>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="creation-grid">
+
+
+                        <!-- STORY -->
+
+                        <button class="creation-card story-card"
+                                data-action="story">
+
+
+                            <div class="creation-icon">
+
+                                <i class="fa-solid fa-book-open"></i>
+
+                            </div>
+
+
+                            <div class="creation-info">
+
+                                <h3>
+                                    New Story
+                                </h3>
+
+                                <p>
+                                    Turn your memories into a story.
+                                </p>
+
+                            </div>
+
+
+                            <i class="fa-solid fa-arrow-right creation-arrow"></i>
+
+
+                        </button>
+
+
+
+                        <!-- AI -->
+
+                        <button class="creation-card ai-card"
+                                data-action="ai">
+
+
+                            <div class="creation-icon">
+
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                            </div>
+
+
+                            <div class="creation-info">
+
+                                <h3>
+                                    AI Story
+                                </h3>
+
+                                <p>
+                                    Let AI help create your story.
+                                </p>
+
+                            </div>
+
+
+                            <i class="fa-solid fa-arrow-right creation-arrow"></i>
+
+
+                        </button>
+
+
+
+                        <!-- PHOTO -->
+
+                        <button class="creation-card photo-card"
+                                data-action="photo">
+
+
+                            <div class="creation-icon">
+
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                            </div>
+
+
+                            <div class="creation-info">
+
+                                <h3>
+                                    Import Memories
+                                </h3>
+
+                                <p>
+                                    Add your photos and videos.
+                                </p>
+
+                            </div>
+
+
+                            <i class="fa-solid fa-arrow-right creation-arrow"></i>
+
+
+                        </button>
+
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- =================================
+                     STATISTICS
+                ================================== -->
+
+                <section class="statistics-grid">
+
+
+                    <div class="stat-card">
+
+
+                        <div class="stat-icon purple">
+
+                            <i class="fa-solid fa-book"></i>
+
+                        </div>
+
+
+                        <div class="stat-content">
+
+                            <span>
+                                Total Stories
+                            </span>
+
+                            <strong>
+                                24
+                            </strong>
+
+                            <small class="positive">
+
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+
+                                12% this month
+
+                            </small>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="stat-card">
+
+
+                        <div class="stat-icon blue">
+
+                            <i class="fa-solid fa-images"></i>
+
+                        </div>
+
+
+                        <div class="stat-content">
+
+                            <span>
+                                Memories
+                            </span>
+
+                            <strong>
+                                138
+                            </strong>
+
+                            <small class="positive">
+
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+
+                                8% this month
+
+                            </small>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="stat-card">
+
+
+                        <div class="stat-icon gold">
+
+                            <i class="fa-solid fa-users"></i>
+
+                        </div>
+
+
+                        <div class="stat-content">
+
+                            <span>
+                                Characters
+                            </span>
+
+                            <strong>
+                                42
+                            </strong>
+
+                            <small>
+                                5 new characters
+                            </small>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="stat-card">
+
+
+                        <div class="stat-icon cyan">
+
+                            <i class="fa-solid fa-clock"></i>
+
+                        </div>
+
+
+                        <div class="stat-content">
+
+                            <span>
+                                Creative Hours
+                            </span>
+
+                            <strong>
+                                48h
+                            </strong>
+
+                            <small>
+                                This month
+                            </small>
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- =================================
+                     MAIN GRID
+                ================================== -->
+
+                <div class="dashboard-grid">
+
+
+
+                    <!-- =================================
+                         RECENT STORIES
+                    ================================== -->
+
+                    <section class="dashboard-panel stories-panel">
+
+
+                        <div class="panel-header">
+
+
+                            <div>
+
+                                <span class="section-overline">
+                                    YOUR WORK
+                                </span>
+
+                                <h2>
+                                    Recent Stories
+                                </h2>
+
+                            </div>
+
+
+                            <a href="#"
+                               class="view-all">
+
+                                View all
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+
+                        </div>
+
+
+
+                        <div class="stories-list">
+
+
+                            <!-- STORY 1 -->
+
+                            <article class="story-item">
+
+
+                                <div class="story-thumbnail story-one">
+
+                                    <i class="fa-solid fa-book-open"></i>
+
+                                </div>
+
+
+                                <div class="story-details">
+
+                                    <h3>
+                                        My Childhood Memories
+                                    </h3>
+
+                                    <p>
+
+                                        <i class="fa-regular fa-clock"></i>
+
+                                        Edited 2 hours ago
+
+                                    </p>
+
+
+                                    <div class="story-tags">
+
+                                        <span>
+                                            Childhood
+                                        </span>
+
+                                        <span>
+                                            Personal
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="story-status completed">
+
+                                    Completed
+
+                                </div>
+
+
+                                <button class="more-button">
+
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                                </button>
+
+
+                            </article>
+
+
+
+                            <!-- STORY 2 -->
+
+                            <article class="story-item">
+
+
+                                <div class="story-thumbnail story-two">
+
+                                    <i class="fa-solid fa-plane"></i>
+
+                                </div>
+
+
+                                <div class="story-details">
+
+                                    <h3>
+                                        My Journey to Japan
+                                    </h3>
+
+                                    <p>
+
+                                        <i class="fa-regular fa-clock"></i>
+
+                                        Edited yesterday
+
+                                    </p>
+
+
+                                    <div class="story-tags">
+
+                                        <span>
+                                            Travel
+                                        </span>
+
+                                        <span>
+                                            Adventure
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="story-status editing">
+
+                                    Editing
+
+                                </div>
+
+
+                                <button class="more-button">
+
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                                </button>
+
+
+                            </article>
+
+
+
+                            <!-- STORY 3 -->
+
+                            <article class="story-item">
+
+
+                                <div class="story-thumbnail story-three">
+
+                                    <i class="fa-solid fa-heart"></i>
+
+                                </div>
+
+
+                                <div class="story-details">
+
+                                    <h3>
+                                        Family Moments
+                                    </h3>
+
+                                    <p>
+
+                                        <i class="fa-regular fa-clock"></i>
+
+                                        Edited 3 days ago
+
+                                    </p>
+
+
+                                    <div class="story-tags">
+
+                                        <span>
+                                            Family
+                                        </span>
+
+                                        <span>
+                                            Memories
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="story-status draft">
+
+                                    Draft
+
+                                </div>
+
+
+                                <button class="more-button">
+
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                                </button>
+
+
+                            </article>
+
+
+                        </div>
+
+
+                    </section>
+
+
+
+                    <!-- =================================
+                         MEMORY TIMELINE
+                    ================================== -->
+
+                    <section class="dashboard-panel timeline-panel">
+
+
+                        <div class="panel-header">
+
+
+                            <div>
+
+                                <span class="section-overline">
+                                    YOUR JOURNEY
+                                </span>
+
+                                <h2>
+                                    Memory Timeline
+                                </h2>
+
+                            </div>
+
+
+                            <button class="panel-action">
+
+                                <i class="fa-solid fa-plus"></i>
+
+                            </button>
+
+
+                        </div>
+
+
+
+                        <div class="timeline">
+
+
+                            <div class="timeline-item">
+
+
+                                <span class="timeline-dot"></span>
+
+
+                                <div>
+
+                                    <strong>
+                                        2026
+                                    </strong>
+
+                                    <p>
+                                        12 memories
+                                    </p>
+
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="timeline-item">
+
+
+                                <span class="timeline-dot"></span>
+
+
+                                <div>
+
+                                    <strong>
+                                        2025
+                                    </strong>
+
+                                    <p>
+                                        28 memories
+                                    </p>
+
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="timeline-item">
+
+
+                                <span class="timeline-dot"></span>
+
+
+                                <div>
+
+                                    <strong>
+                                        2024
+                                    </strong>
+
+                                    <p>
+                                        34 memories
+                                    </p>
+
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="timeline-item">
+
+
+                                <span class="timeline-dot"></span>
+
+
+                                <div>
+
+                                    <strong>
+                                        2023
+                                    </strong>
+
+                                    <p>
+                                        21 memories
+                                    </p>
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                        <button class="timeline-button">
+
+                            Explore full timeline
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+
+                    </section>
+
+
+                </div>
+
+
+
+                <!-- =================================
+                     FAVORITE CHARACTERS
+                ================================== -->
+
+                <section class="dashboard-panel characters-panel">
+
+
+                    <div class="panel-header">
+
+
+                        <div>
+
+                            <span class="section-overline">
+                                YOUR PEOPLE
+                            </span>
+
+                            <h2>
+                                Favorite Characters
+                            </h2>
+
+                        </div>
+
+
+                        <a href="#"
+                           class="view-all">
+
+                            View all
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+
+                    </div>
+
+
+
+                    <div class="characters-grid">
+
+
+                        <div class="character-card">
+
+                            <div class="character-avatar">
+
+                                <img src="assets/images/avatars/user.png"
+                                     alt="Character">
+
+                            </div>
+
+                            <h3>
+                                My Character
+                            </h3>
+
+                            <span>
+                                Main Character
+                            </span>
+
+                        </div>
+
+
+                        <button class="character-add">
+
+                            <i class="fa-solid fa-plus"></i>
+
+                            <span>
+                                Add Character
+                            </span>
+
+                        </button>
+
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- =================================
+                     FOOTER
+                ================================== -->
+
+                <footer class="dashboard-footer">
+
+
+                    <p>
+
+                        © 2026
+                        <strong>MY HISTORY</strong>.
+
+                        Preserve your story. Create your history.
+
+                    </p>
+
+
+                    <div>
+
+                        <a href="#">
+                            Privacy
+                        </a>
+
+                        <a href="#">
+                            Help
+                        </a>
+
+                        <a href="#">
+                            Contact
+                        </a>
+
+                    </div>
+
+
+                </footer>
+
+
+            </div>
+
+
+        </main>
+
+
+    </div>
+
+
+
+    <!-- =================================
+         CREATE STORY MODAL
+    ================================== -->
+
+    <div class="modal-overlay"
+         id="createModal">
+
+
+        <div class="create-modal">
+
+
+            <button class="modal-close"
+                    id="modalClose">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+            <div class="modal-header">
+
+
+                <div class="modal-icon">
+
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                </div>
+
+
+                <h2>
+                    Create Something New
+                </h2>
+
+
+                <p>
+                    Choose how you want to start your next memory.
+                </p>
+
+
+            </div>
+
+
+
+            <div class="modal-options">
+
+
+                <button class="modal-option">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                    <div>
+
+                        <strong>
+                            Create a Story
+                        </strong>
+
+                        <span>
+                            Build your own story from scratch.
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </button>
+
+
+                <button class="modal-option">
+
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                    <div>
+
+                        <strong>
+                            AI Story
+                        </strong>
+
+                        <span>
+                            Let AI help you tell your story.
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </button>
+
+
+                <button class="modal-option">
+
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                    <div>
+
+                        <strong>
+                            Import Memories
+                        </strong>
+
+                        <span>
+                            Upload photos and videos.
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =================================
+         JAVASCRIPT
+    ================================== -->
+
+    <script src="assets/js/dashboard.js"></script>
+
+
+</body>
+
+</html>

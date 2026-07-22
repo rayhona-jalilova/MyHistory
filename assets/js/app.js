@@ -1,20 +1,46 @@
-const logo=document.querySelector(".logo");
+const logo = document.querySelector(".logo");
 
 logo.animate(
-
 [
-{transform:"translateY(-15px)"},
-{transform:"translateY(15px)"}
+    {
+        transform:"translateY(0px)"
+    },
+    {
+        transform:"translateY(-12px)"
+    }
 ],
-
 {
+    duration:2500,
+    direction:"alternate",
+    iterations:Infinity
+});
 
-duration:3000,
+const stars=document.querySelector(".stars");
 
-iterations:Infinity,
+let pos=0;
 
-direction:"alternate"
+setInterval(()=>{
 
-}
+    pos++;
 
-);
+    stars.style.backgroundPosition=`0 ${pos}px`;
+
+},40);
+
+const googleBtn =
+document.querySelector(".google-btn");
+
+const guestBtn =
+document.querySelector(".guest-btn");
+
+googleBtn.addEventListener("click",()=>{
+
+    window.location.href="login.html";
+
+});
+
+guestBtn.addEventListener("click",()=>{
+
+    window.location.href="login.html";
+
+});

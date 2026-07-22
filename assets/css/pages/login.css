@@ -1,0 +1,649 @@
+/* ==========================================
+   MY HISTORY
+   LOGIN PAGE
+========================================== */
+
+/* ===== BODY ===== */
+
+body{
+    margin:0;
+    padding:0;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    font-family:'Poppins',sans-serif;
+    background:#070B18;
+    position:relative;
+}
+
+/* ===== BACKGROUND ===== */
+
+.background{
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at top,#382b7b 0%,#070B18 70%);
+    overflow:hidden;
+}
+
+/* ===== STARS ===== */
+
+.stars{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+    radial-gradient(#fff 1px,transparent 1px);
+
+    background-size:45px 45px;
+
+    opacity:.35;
+
+}
+
+/* ===== AURORA ===== */
+
+.aurora{
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+    opacity:.45;
+
+}
+
+.aurora-left{
+
+    background:#7C5CFF;
+
+    top:-120px;
+
+    left:-120px;
+
+}
+
+.aurora-right{
+
+    background:#00D9FF;
+
+    right:-120px;
+
+    bottom:-120px;
+
+}
+
+/* ===== LOGIN CARD ===== */
+
+.login-card{
+
+    position:relative;
+
+    z-index:2;
+
+    width:420px;
+
+    max-width:92%;
+
+    padding:45px;
+
+    border-radius:32px;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    backdrop-filter:blur(28px);
+
+    -webkit-backdrop-filter:blur(28px);
+
+    box-shadow:
+
+    0 25px 60px rgba(0,0,0,.45);
+
+}
+
+/* ===== LOGO ===== */
+
+.logo-area{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+.logo-area img{
+
+    width:130px;
+
+    margin:auto;
+
+}
+
+.logo-area h1{
+
+    color:#FFD166;
+
+    font-family:'Cinzel',serif;
+
+    margin-top:18px;
+
+    font-size:34px;
+
+    letter-spacing:3px;
+
+}
+
+.logo-area p{
+
+    color:#cbd3e4;
+
+    margin-top:10px;
+
+    font-size:18px;
+
+}
+
+/* ===== FORM ===== */
+
+form{
+
+    width:100%;
+
+}
+
+/* ===== INPUT ===== */
+
+.input-box{
+
+    position:relative;
+
+    margin-bottom:22px;
+
+}
+
+.input-box input{
+
+    width:100%;
+
+    height:58px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:16px;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    padding-left:52px;
+
+    padding-right:52px;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.input-box input::placeholder{
+
+    color:#aab3c4;
+
+}
+
+.input-box input:focus{
+
+    border:1px solid #7C5CFF;
+
+    box-shadow:
+
+    0 0 15px rgba(124,92,255,.35);
+
+}
+
+/* ===== ICON ===== */
+
+.input-box i:first-child{
+
+    position:absolute;
+
+    left:18px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#9aa5ba;
+
+}
+
+.eye{
+
+    position:absolute;
+
+    right:18px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    cursor:pointer;
+
+    color:#9aa5ba;
+
+}
+
+/* ===== OPTIONS ===== */
+
+.options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:28px;
+
+    font-size:14px;
+
+}
+
+.options label{
+
+    color:#d7ddea;
+
+}
+
+.options input{
+
+    margin-right:6px;
+
+}
+
+.options a{
+
+    color:#7C5CFF;
+
+    text-decoration:none;
+
+}
+
+.options a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ===== LOGIN BUTTON ===== */
+
+.login-btn{
+
+    width:100%;
+
+    height:58px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:linear-gradient(135deg,#7C5CFF,#00D9FF);
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.login-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+    0 15px 35px rgba(124,92,255,.4);
+
+}
+
+/* ==========================================
+   DIVIDER
+========================================== */
+
+.divider{
+    display:flex;
+    align-items:center;
+    margin:30px 0;
+    color:#9aa5ba;
+    font-size:14px;
+}
+
+.divider::before,
+.divider::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:rgba(255,255,255,.15);
+}
+
+.divider span{
+    margin:0 15px;
+    letter-spacing:2px;
+}
+
+/* ==========================================
+   GOOGLE BUTTON
+========================================== */
+
+.google-btn{
+
+    width:100%;
+    height:58px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.05);
+
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.google-btn i{
+
+    color:#ffffff;
+    font-size:20px;
+
+}
+
+.google-btn:hover{
+
+    background:rgba(255,255,255,.12);
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.25);
+
+}
+
+/* ==========================================
+   REGISTER
+========================================== */
+
+.register{
+
+    text-align:center;
+
+    margin-top:30px;
+
+    color:#c9d2df;
+
+    font-size:15px;
+
+}
+
+.register a{
+
+    color:#00D9FF;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.register a:hover{
+
+    color:#7C5CFF;
+
+}
+
+/* ==========================================
+   CARD ANIMATION
+========================================== */
+
+.login-card{
+
+    animation:cardShow .9s ease;
+
+}
+
+@keyframes cardShow{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px) scale(.95);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0) scale(1);
+
+    }
+
+}
+
+/* ==========================================
+   FLOATING LOGO
+========================================== */
+
+.logo-area img{
+
+    animation:logoFloat 5s ease-in-out infinite;
+
+}
+
+@keyframes logoFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   GLOW EFFECT
+========================================== */
+
+.login-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+
+    height:250px;
+
+    border-radius:50%;
+
+    background:rgba(124,92,255,.12);
+
+    top:-100px;
+
+    right:-80px;
+
+    filter:blur(70px);
+
+    z-index:-1;
+
+}
+
+.login-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    background:rgba(0,217,255,.10);
+
+    bottom:-80px;
+
+    left:-60px;
+
+    filter:blur(60px);
+
+    z-index:-1;
+
+}
+
+/* ==========================================
+   INPUT HOVER
+========================================== */
+
+.input-box:hover input{
+
+    background:rgba(255,255,255,.10);
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+    .login-card{
+
+        width:92%;
+
+        padding:35px 25px;
+
+    }
+
+    .logo-area img{
+
+        width:110px;
+
+    }
+
+    .logo-area h1{
+
+        font-size:28px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .login-card{
+
+        width:100%;
+
+        height:100vh;
+
+        border-radius:0;
+
+        padding:40px 20px;
+
+        display:flex;
+
+        flex-direction:column;
+
+        justify-content:center;
+
+    }
+
+    .options{
+
+        flex-direction:column;
+
+        gap:15px;
+
+        align-items:flex-start;
+
+    }
+
+    .logo-area img{
+
+        width:90px;
+
+    }
+
+    .logo-area h1{
+
+        font-size:24px;
+
+    }
+
+    .logo-area p{
+
+        font-size:15px;
+
+    }
+
+    .login-btn,
+    .google-btn{
+
+        height:55px;
+
+        font-size:15px;
+
+    }
+
+}
+
+/* ==========================================
+   END
+========================================== */

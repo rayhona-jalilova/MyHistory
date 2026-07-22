@@ -1,0 +1,32 @@
+:root{
+
+    /* Background */
+
+    --bg:#09071B;
+    --bg-light:#1B1845;
+    --bg-card:rgba(255,255,255,.08);
+
+    /* Colors */
+
+    --primary:#8B5CF6;
+    --secondary:#5EE7FF;
+    --success:#22FF88;
+    --gold:#FFD54F;
+
+    --white:#ffffff;
+    --text:#D7D7D7;
+
+    /* Border */
+
+    --border:rgba(255,255,255,.12);
+
+    /* Shadow */
+
+    --shadow:
+    0 20px 50px rgba(0,0,0,.35);
+
+    /* Radius */
+
+    --radius:30px;
+
+}

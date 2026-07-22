@@ -3,45 +3,123 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>MY HISTORY</title>
+    <title>MY HISTORY</title>
 
-<link rel="stylesheet" href="assets/css/main.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="assets/css/main.css">
+
+    <link rel="stylesheet"
+          href="assets/css/pages/splash.css">
 
 </head>
 
 <body>
 
-<div class="splash">
+    <!-- ===============================
+         BACKGROUND
+    ================================ -->
 
-    <img src="assets/images/logo/logo.png" class="logo">
+    <div class="background">
 
-    <h2>Create Your Own Story</h2>
+        <div class="stars"></div>
 
-    <button class="google">
+        <div class="aurora aurora-left"></div>
 
-        Continue with Google
+        <div class="aurora aurora-right"></div>
 
-    </button>
+        <div class="gradient-light"></div>
 
-    <button class="guest">
+    </div>
 
-        Continue as Guest
+    <!-- ===============================
+         PHONE
+    ================================ -->
 
-    </button>
+    <main class="phone">
 
-    <p>Version 1.0</p>
+        <!-- Glow -->
 
-</div>
+        <div class="phone-glow"></div>
 
-<script src="assets/js/app.js"></script>
+        <!-- Logo -->
+
+        <section class="logo-section">
+
+            <img
+                src="assets/images/logo/logo.png"
+                alt="MY HISTORY Logo"
+                class="logo">
+
+            <h1 class="logo-title">
+
+                MY HISTORY
+
+            </h1>
+
+            <p class="logo-text">
+
+                Create your own story
+
+            </p>
+
+        </section>
+
+        <!-- Buttons -->
+
+        <section class="button-section">
+
+            <button class="btn btn-google">
+
+                <i class="fa-brands fa-google"></i>
+
+                Continue with Google
+
+            </button>
+
+            <button class="btn btn-guest">
+
+                Continue as Guest
+
+            </button>
+
+        </section>
+
+        <!-- Footer -->
+
+        <footer>
+
+            <span>
+
+                Version 1.0
+
+            </span>
+
+        </footer>
+
+    </main>
+
+    <!-- JavaScript -->
+
+    <script src="assets/js/splash.js"></script>
 
 </body>
 
