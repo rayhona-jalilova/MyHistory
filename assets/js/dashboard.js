@@ -1,106 +1,591 @@
 /* =========================================================
    MY HISTORY — DASHBOARD JAVASCRIPT
+   Version: 1.0
 ========================================================= */
 
-document.addEventListener("DOMContentLoaded", () => {
-
-    /* =====================================================
-       ELEMENTS
-    ===================================================== */
-
-    const sidebar = document.getElementById("sidebar");
-    const sidebarOverlay = document.getElementById("sidebarOverlay");
-    const menuToggle = document.getElementById("menuToggle");
-    const sidebarClose = document.getElementById("sidebarClose");
-
-    const createModal = document.getElementById("createModal");
-    const modalClose = document.getElementById("modalClose");
-
-    const quickCreate = document.getElementById("quickCreate");
-    const createStoryButton =
-        document.getElementById("createStoryButton");
-
-    const aiStudioButton =
-        document.getElementById("aiStudioButton");
-
-    const themeToggle =
-        document.getElementById("themeToggle");
-
-    const globalSearch =
-        document.getElementById("globalSearch");
-
-    const logoutBtn =
-        document.getElementById("logoutBtn");
-
-    const profileButton =
-        document.getElementById("profileButton");
+"use strict";
 
 
+/* =========================================================
+   1. DOM ELEMENTS
+========================================================= */
 
-    /* =====================================================
-       1. MOBILE SIDEBAR
-    ===================================================== */
+const sidebar =
+    document.getElementById("dashboardSidebar");
 
-    function openSidebar() {
+const mobileMenuButton =
+    document.getElementById("mobileMenuButton");
 
-        if (!sidebar) return;
+const dashboardOverlay =
+    document.getElementById("dashboardOverlay");
 
-        sidebar.classList.add("open");
+const notificationButton =
+    document.getElementById("notificationButton");
 
-        sidebarOverlay?.classList.add("show");
+const notificationPanel =
+    document.getElementById("notificationPanel");
 
-        document.body.style.overflow = "hidden";
+const closeNotificationPanel =
+    document.getElementById("closeNotificationPanel");
 
-    }
+const userMenuButton =
+    document.getElementById("userMenuButton");
+
+const userDropdown =
+    document.getElementById("userDropdown");
+
+const dashboardSearch =
+    document.getElementById("dashboardSearch");
+
+const storiesGrid =
+    document.getElementById("storiesGrid");
 
 
-    function closeSidebar() {
+/* =========================================================
+   2. HELPER FUNCTIONS
+========================================================= */
 
-        if (!sidebar) return;
 
-        sidebar.classList.remove("open");
+/*
+    Close mobile sidebar
+*/
 
-        sidebarOverlay?.classList.remove("show");
+function closeSidebar() {
 
-        document.body.style.overflow = "";
+    if (!sidebar) return;
+
+    sidebar.classList.remove("open");
+
+    if (dashboardOverlay) {
+
+        dashboardOverlay.classList.remove("show");
 
     }
 
+}
 
-    menuToggle?.addEventListener(
+
+/*
+    Open mobile sidebar
+*/
+
+function openSidebar() {
+
+    if (!sidebar) return;
+
+    sidebar.classList.add("open");
+
+    if (dashboardOverlay) {
+
+        dashboardOverlay.classList.add("show");
+
+    }
+
+}
+
+
+/*
+    Close notification
+*/
+
+function closeNotifications() {
+
+    if (!notificationPanel) return;
+
+    notificationPanel.classList.remove("show");
+
+}
+
+
+/*
+    Open notification
+*/
+
+function openNotifications() {
+
+    if (!notificationPanel) return;
+
+    notificationPanel.classList.add("show");
+
+}
+
+
+/*
+    Close user menu
+*/
+
+function closeUserMenu() {
+
+    if (!userDropdown) return;
+
+    userDropdown.classList.remove("show");
+
+}
+
+
+/*
+    Open user menu
+*/
+
+function openUserMenu() {
+
+    if (!userDropdown) return;
+
+    userDropdown.classList.add("show");
+
+}
+
+
+/*
+    Close all floating menus
+*/
+
+function closeAllMenus() {
+
+    closeNotifications();
+
+    closeUserMenu();
+
+}
+
+
+/* =========================================================
+   3. MOBILE SIDEBAR
+========================================================= */
+
+if (mobileMenuButton) {
+
+    mobileMenuButton.addEventListener(
         "click",
-        openSidebar
+        function () {
+
+            const isOpen =
+                sidebar.classList.contains("open");
+
+
+            closeAllMenus();
+
+
+            if (isOpen) {
+
+                closeSidebar();
+
+            } else {
+
+                openSidebar();
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   4. OVERLAY CLICK
+========================================================= */
+
+if (dashboardOverlay) {
+
+    dashboardOverlay.addEventListener(
+        "click",
+        function () {
+
+            closeSidebar();
+
+            closeAllMenus();
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   5. NOTIFICATION PANEL
+========================================================= */
+
+if (notificationButton) {
+
+    notificationButton.addEventListener(
+        "click",
+        function (event) {
+
+            event.stopPropagation();
+
+
+            const isOpen =
+                notificationPanel.classList.contains("show");
+
+
+            closeUserMenu();
+
+
+            if (isOpen) {
+
+                closeNotifications();
+
+            } else {
+
+                openNotifications();
+
+            }
+
+        }
+    );
+
+}
+
+
+if (closeNotificationPanel) {
+
+    closeNotificationPanel.addEventListener(
+        "click",
+        function () {
+
+            closeNotifications();
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   6. USER PROFILE DROPDOWN
+========================================================= */
+
+if (userMenuButton) {
+
+    userMenuButton.addEventListener(
+        "click",
+        function (event) {
+
+            event.stopPropagation();
+
+
+            const isOpen =
+                userDropdown.classList.contains("show");
+
+
+            closeNotifications();
+
+
+            if (isOpen) {
+
+                closeUserMenu();
+
+            } else {
+
+                openUserMenu();
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   7. CLOSE MENUS WHEN CLICKING OUTSIDE
+========================================================= */
+
+document.addEventListener(
+    "click",
+    function (event) {
+
+
+        /*
+            Notification panel
+        */
+
+        if (
+            notificationPanel &&
+            !notificationPanel.contains(event.target) &&
+            notificationButton &&
+            !notificationButton.contains(event.target)
+        ) {
+
+            closeNotifications();
+
+        }
+
+
+        /*
+            User dropdown
+        */
+
+        if (
+            userDropdown &&
+            !userDropdown.contains(event.target) &&
+            userMenuButton &&
+            !userMenuButton.contains(event.target)
+        ) {
+
+            closeUserMenu();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   8. ESCAPE KEY
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    function (event) {
+
+        if (event.key === "Escape") {
+
+            closeSidebar();
+
+            closeAllMenus();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   9. CTRL + K SEARCH
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    function (event) {
+
+        /*
+            Windows / Linux:
+            Ctrl + K
+
+            Mac:
+            Command + K
+        */
+
+        if (
+            (event.ctrlKey || event.metaKey) &&
+            event.key.toLowerCase() === "k"
+        ) {
+
+            event.preventDefault();
+
+
+            if (dashboardSearch) {
+
+                dashboardSearch.focus();
+
+                dashboardSearch.select();
+
+            }
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   10. STORY SEARCH
+========================================================= */
+
+if (dashboardSearch && storiesGrid) {
+
+    dashboardSearch.addEventListener(
+        "input",
+        function () {
+
+            const searchValue =
+                dashboardSearch.value
+                    .toLowerCase()
+                    .trim();
+
+
+            const storyCards =
+                storiesGrid.querySelectorAll(
+                    ".story-card"
+                );
+
+
+            let visibleStories = 0;
+
+
+            storyCards.forEach(
+                function (card) {
+
+                    const title =
+                        (
+                            card.dataset.title ||
+                            card
+                                .querySelector("h3")
+                                ?.textContent ||
+                            ""
+                        )
+                        .toLowerCase();
+
+
+                    const description =
+                        (
+                            card
+                                .querySelector("p")
+                                ?.textContent ||
+                            ""
+                        )
+                        .toLowerCase();
+
+
+                    const matches =
+                        title.includes(searchValue) ||
+                        description.includes(searchValue);
+
+
+                    if (matches) {
+
+                        card.style.display = "";
+
+                        visibleStories++;
+
+                    } else {
+
+                        card.style.display = "none";
+
+                    }
+
+                }
+            );
+
+
+            /*
+                Search result message
+            */
+
+            let resultMessage =
+                document.getElementById(
+                    "storySearchMessage"
+                );
+
+
+            if (!resultMessage) {
+
+                resultMessage =
+                    document.createElement("div");
+
+                resultMessage.id =
+                    "storySearchMessage";
+
+                resultMessage.style.gridColumn =
+                    "1 / -1";
+
+                resultMessage.style.padding =
+                    "30px";
+
+                resultMessage.style.textAlign =
+                    "center";
+
+                resultMessage.style.color =
+                    "#9a95a7";
+
+                resultMessage.style.fontSize =
+                    "12px";
+
+                storiesGrid.appendChild(
+                    resultMessage
+                );
+
+            }
+
+
+            if (
+                searchValue &&
+                visibleStories === 0
+            ) {
+
+                resultMessage.textContent =
+                    "No stories found.";
+
+                resultMessage.style.display =
+                    "block";
+
+            } else {
+
+                resultMessage.style.display =
+                    "none";
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   11. SIDEBAR NAVIGATION
+========================================================= */
+
+const navigationLinks =
+    document.querySelectorAll(
+        ".dashboard-nav-link"
     );
 
 
-    sidebarClose?.addEventListener(
-        "click",
-        closeSidebar
-    );
+navigationLinks.forEach(
+    function (link) {
 
-
-    sidebarOverlay?.addEventListener(
-        "click",
-        closeSidebar
-    );
-
-
-
-    /* =====================================================
-       2. CLOSE SIDEBAR AFTER NAVIGATION
-    ===================================================== */
-
-    const navItems =
-        document.querySelectorAll(
-            ".nav-item"
-        );
-
-
-    navItems.forEach(item => {
-
-        item.addEventListener(
+        link.addEventListener(
             "click",
-            () => {
+            function (event) {
+
+
+                const section =
+                    link.dataset.section;
+
+
+                /*
+                    If link has a section,
+                    show demo message
+                */
+
+                if (section) {
+
+                    event.preventDefault();
+
+
+                    handleSectionNavigation(
+                        section
+                    );
+
+                }
+
+
+                /*
+                    Active menu
+                */
+
+                navigationLinks.forEach(
+                    function (item) {
+
+                        item.classList.remove(
+                            "active"
+                        );
+
+                    }
+                );
+
+
+                link.classList.add(
+                    "active"
+                );
+
+
+                /*
+                    Close sidebar on mobile
+                */
 
                 if (
                     window.innerWidth <= 900
@@ -113,616 +598,363 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         );
 
-    });
-
-
-
-    /* =====================================================
-       3. CREATE STORY MODAL
-    ===================================================== */
-
-    function openCreateModal() {
-
-        if (!createModal) return;
-
-        createModal.classList.add("show");
-
-        document.body.style.overflow = "hidden";
-
     }
+);
 
 
-    function closeCreateModal() {
+/* =========================================================
+   12. SECTION NAVIGATION
+========================================================= */
 
-        if (!createModal) return;
-
-        createModal.classList.remove("show");
-
-        document.body.style.overflow = "";
-
-    }
+function handleSectionNavigation(
+    section
+) {
 
 
-    quickCreate?.addEventListener(
-        "click",
-        openCreateModal
+    const sectionNames = {
+
+        stories:
+            "My Stories",
+
+        characters:
+            "Characters",
+
+        ai:
+            "AI Assistant",
+
+        templates:
+            "Templates",
+
+        settings:
+            "Settings"
+
+    };
+
+
+    const sectionTitle =
+        sectionNames[section] ||
+        "Section";
+
+
+    showToast(
+        `${sectionTitle} section is coming soon.`
+    );
+
+}
+
+
+/* =========================================================
+   13. VIEW ALL BUTTON
+========================================================= */
+
+const viewAllLinks =
+    document.querySelectorAll(
+        "[data-section]"
     );
 
 
-    createStoryButton?.addEventListener(
-        "click",
-        openCreateModal
-    );
+viewAllLinks.forEach(
+    function (element) {
 
+        if (
+            element.classList.contains(
+                "dashboard-nav-link"
+            )
+        ) {
 
-    modalClose?.addEventListener(
-        "click",
-        closeCreateModal
-    );
-
-
-
-    /* =====================================================
-       4. CLOSE MODAL BY CLICKING OUTSIDE
-    ===================================================== */
-
-    createModal?.addEventListener(
-        "click",
-        event => {
-
-            if (
-                event.target === createModal
-            ) {
-
-                closeCreateModal();
-
-            }
+            return;
 
         }
-    );
 
 
-
-    /* =====================================================
-       5. ESC KEY
-    ===================================================== */
-
-    document.addEventListener(
-        "keydown",
-        event => {
-
-            if (
-                event.key === "Escape"
-            ) {
-
-                closeCreateModal();
-
-                closeSidebar();
-
-            }
-
-        }
-    );
-
-
-
-    /* =====================================================
-       6. CREATE OPTIONS
-    ===================================================== */
-
-    const creationCards =
-        document.querySelectorAll(
-            ".creation-card"
-        );
-
-
-    creationCards.forEach(card => {
-
-        card.addEventListener(
+        element.addEventListener(
             "click",
-            () => {
+            function (event) {
 
-                const action =
-                    card.dataset.action;
-
-
-                if (
-                    action === "story"
-                ) {
-
-                    console.log(
-                        "New Story selected"
-                    );
-
-                    openCreateModal();
-
-                }
+                const section =
+                    element.dataset.section;
 
 
-                if (
-                    action === "ai"
-                ) {
+                if (!section) return;
 
-                    console.log(
-                        "AI Story selected"
-                    );
-
-                    alert(
-                        "AI Studio will be available soon."
-                    );
-
-                }
-
-
-                if (
-                    action === "photo"
-                ) {
-
-                    console.log(
-                        "Import Memories selected"
-                    );
-
-                    alert(
-                        "Memory import will be available soon."
-                    );
-
-                }
-
-            }
-        );
-
-    });
-
-
-
-    /* =====================================================
-       7. AI STUDIO BUTTON
-    ===================================================== */
-
-    aiStudioButton?.addEventListener(
-        "click",
-        () => {
-
-            alert(
-                "AI Studio will be available soon."
-            );
-
-        }
-    );
-
-
-
-    /* =====================================================
-       8. MODAL OPTIONS
-    ===================================================== */
-
-    const modalOptions =
-        document.querySelectorAll(
-            ".modal-option"
-        );
-
-
-    modalOptions.forEach(
-        (option, index) => {
-
-            option.addEventListener(
-                "click",
-                () => {
-
-                    switch (index) {
-
-                        case 0:
-
-                            console.log(
-                                "Create Story"
-                            );
-
-                            closeCreateModal();
-
-                            alert(
-                                "Story Creator will be available soon."
-                            );
-
-                            break;
-
-
-                        case 1:
-
-                            console.log(
-                                "AI Story"
-                            );
-
-                            closeCreateModal();
-
-                            alert(
-                                "AI Story Creator will be available soon."
-                            );
-
-                            break;
-
-
-                        case 2:
-
-                            console.log(
-                                "Import Memories"
-                            );
-
-                            closeCreateModal();
-
-                            alert(
-                                "Memory Import will be available soon."
-                            );
-
-                            break;
-
-                    }
-
-                }
-            );
-
-        }
-    );
-
-
-
-    /* =====================================================
-       9. SEARCH — CTRL + K
-    ===================================================== */
-
-    document.addEventListener(
-        "keydown",
-        event => {
-
-            if (
-                (event.ctrlKey ||
-                 event.metaKey) &&
-                event.key.toLowerCase() === "k"
-            ) {
 
                 event.preventDefault();
 
-                globalSearch?.focus();
+
+                handleSectionNavigation(
+                    section
+                );
 
             }
-
-        }
-    );
-
-
-
-    /* =====================================================
-       10. SEARCH FUNCTION
-    ===================================================== */
-
-    globalSearch?.addEventListener(
-        "input",
-        event => {
-
-            const searchValue =
-                event.target.value
-                .toLowerCase()
-                .trim();
-
-
-            const storyItems =
-                document.querySelectorAll(
-                    ".story-item"
-                );
-
-
-            storyItems.forEach(
-                story => {
-
-                    const title =
-                        story
-                        .querySelector(
-                            ".story-details h3"
-                        )
-                        ?.textContent
-                        .toLowerCase();
-
-
-                    const tags =
-                        story
-                        .querySelector(
-                            ".story-tags"
-                        )
-                        ?.textContent
-                        .toLowerCase();
-
-
-                    const matches =
-                        title?.includes(
-                            searchValue
-                        ) ||
-                        tags?.includes(
-                            searchValue
-                        );
-
-
-                    if (
-                        matches ||
-                        searchValue === ""
-                    ) {
-
-                        story.style.display =
-                            "flex";
-
-                    } else {
-
-                        story.style.display =
-                            "none";
-
-                    }
-
-                }
-            );
-
-        }
-    );
-
-
-
-    /* =====================================================
-       11. THEME TOGGLE
-    ===================================================== */
-
-    const savedTheme =
-        localStorage.getItem(
-            "myHistoryTheme"
         );
-
-
-    if (
-        savedTheme === "light"
-    ) {
-
-        document.body.classList.add(
-            "light-theme"
-        );
-
-        updateThemeIcon();
 
     }
+);
 
 
-    themeToggle?.addEventListener(
-        "click",
-        () => {
+/* =========================================================
+   14. AI QUICK ACTIONS
+========================================================= */
 
-            document.body.classList.toggle(
-                "light-theme"
-            );
-
-
-            const isLight =
-                document.body.classList.contains(
-                    "light-theme"
-                );
-
-
-            localStorage.setItem(
-                "myHistoryTheme",
-                isLight
-                    ? "light"
-                    : "dark"
-            );
-
-
-            updateThemeIcon();
-
-        }
+const aiQuickActions =
+    document.querySelectorAll(
+        ".ai-quick-action"
     );
 
 
-    function updateThemeIcon() {
+aiQuickActions.forEach(
+    function (button) {
 
-        if (!themeToggle) return;
+        button.addEventListener(
+            "click",
+            function () {
 
-
-        const icon =
-            themeToggle.querySelector(
-                "i"
-            );
-
-
-        if (!icon) return;
+                const prompt =
+                    button.dataset.prompt ||
+                    "Create a new story";
 
 
-        const isLight =
-            document.body.classList.contains(
-                "light-theme"
-            );
-
-
-        if (isLight) {
-
-            icon.classList.remove(
-                "fa-moon"
-            );
-
-            icon.classList.add(
-                "fa-sun"
-            );
-
-        } else {
-
-            icon.classList.remove(
-                "fa-sun"
-            );
-
-            icon.classList.add(
-                "fa-moon"
-            );
-
-        }
-
-    }
-
-
-
-    /* =====================================================
-       12. NOTIFICATION BUTTON
-    ===================================================== */
-
-    const notificationButton =
-        document.getElementById(
-            "notificationButton"
-        );
-
-
-    notificationButton?.addEventListener(
-        "click",
-        () => {
-
-            notificationButton
-                .classList.toggle(
-                    "active"
+                showToast(
+                    `AI Assistant: ${prompt}`
                 );
-
-
-            console.log(
-                "Notifications opened"
-            );
-
-        }
-    );
-
-
-
-    /* =====================================================
-       13. PROFILE BUTTON
-    ===================================================== */
-
-    profileButton?.addEventListener(
-        "click",
-        () => {
-
-            console.log(
-                "Profile menu clicked"
-            );
-
-        }
-    );
-
-
-
-    /* =====================================================
-       14. LOGOUT
-    ===================================================== */
-
-    logoutBtn?.addEventListener(
-        "click",
-        () => {
-
-            const confirmLogout =
-                confirm(
-                    "Are you sure you want to log out?"
-                );
-
-
-            if (
-                confirmLogout
-            ) {
-
-                localStorage.removeItem(
-                    "myHistoryTheme"
-                );
-
-
-                window.location.href =
-                    "index.html";
 
             }
+        );
 
-        }
+    }
+);
+
+
+/* =========================================================
+   15. STORY MENU
+========================================================= */
+
+const storyMenuButtons =
+    document.querySelectorAll(
+        ".story-menu-button"
     );
 
 
+storyMenuButtons.forEach(
+    function (button) {
 
-    /* =====================================================
-       15. STORY MORE BUTTONS
-    ===================================================== */
+        button.addEventListener(
+            "click",
+            function (event) {
 
-    const moreButtons =
-        document.querySelectorAll(
-            ".more-button"
-        );
-
-
-    moreButtons.forEach(
-        button => {
-
-            button.addEventListener(
-                "click",
-                event => {
-
-                    event.stopPropagation();
+                event.stopPropagation();
 
 
-                    console.log(
-                        "Story options clicked"
+                const storyCard =
+                    button.closest(
+                        ".story-card"
                     );
 
-                }
-            );
 
-        }
-    );
+                const storyTitle =
+                    storyCard
+                        ?.querySelector("h3")
+                        ?.textContent ||
+                    "Story";
 
 
+                showToast(
+                    `${storyTitle} options are coming soon.`
+                );
 
-    /* =====================================================
-       16. CHARACTER ADD
-    ===================================================== */
+            }
+        );
 
-    const characterAdd =
+    }
+);
+
+
+/* =========================================================
+   16. TOAST NOTIFICATION
+========================================================= */
+
+function showToast(
+    message
+) {
+
+
+    /*
+        Remove existing toast
+    */
+
+    const oldToast =
         document.querySelector(
-            ".character-add"
+            ".dashboard-toast"
         );
 
 
-    characterAdd?.addEventListener(
-        "click",
-        () => {
+    if (oldToast) {
 
-            alert(
-                "Character Creator will be available soon."
+        oldToast.remove();
+
+    }
+
+
+    /*
+        Create toast
+    */
+
+    const toast =
+        document.createElement(
+            "div"
+        );
+
+
+    toast.className =
+        "dashboard-toast";
+
+
+    toast.innerHTML = `
+
+        <i class="fa-solid fa-circle-info"></i>
+
+        <span>${message}</span>
+
+    `;
+
+
+    /*
+        Toast styles
+    */
+
+    Object.assign(
+        toast.style,
+        {
+
+            position: "fixed",
+
+            bottom: "25px",
+
+            right: "25px",
+
+            zIndex: "3000",
+
+            display: "flex",
+
+            alignItems: "center",
+
+            gap: "10px",
+
+            padding: "13px 17px",
+
+            borderRadius: "12px",
+
+            color: "#ffffff",
+
+            background:
+                "linear-gradient(135deg, #7c3aed, #ec4899)",
+
+            boxShadow:
+                "0 12px 30px rgba(124, 58, 237, 0.25)",
+
+            fontSize: "11px",
+
+            fontWeight: "500",
+
+            opacity: "0",
+
+            transform:
+                "translateY(15px)",
+
+            transition:
+                "all 0.3s ease"
+
+        }
+
+    );
+
+
+    document.body.appendChild(
+        toast
+    );
+
+
+    /*
+        Show toast
+    */
+
+    requestAnimationFrame(
+        function () {
+
+            toast.style.opacity =
+                "1";
+
+            toast.style.transform =
+                "translateY(0)";
+
+        }
+    );
+
+
+    /*
+        Hide toast
+    */
+
+    setTimeout(
+        function () {
+
+            toast.style.opacity =
+                "0";
+
+            toast.style.transform =
+                "translateY(15px)";
+
+
+            setTimeout(
+                function () {
+
+                    toast.remove();
+
+                },
+                300
             );
 
+        },
+        3000
+    );
+
+}
+
+
+/* =========================================================
+   17. WINDOW RESIZE
+========================================================= */
+
+window.addEventListener(
+    "resize",
+    function () {
+
+        /*
+            If screen becomes desktop,
+            remove mobile sidebar state
+        */
+
+        if (
+            window.innerWidth > 900
+        ) {
+
+            closeSidebar();
+
         }
-    );
+
+    }
+);
 
 
+/* =========================================================
+   18. WELCOME MESSAGE
+========================================================= */
 
-    /* =====================================================
-       17. WINDOW RESIZE
-    ===================================================== */
-
-    window.addEventListener(
-        "resize",
-        () => {
-
-            if (
-                window.innerWidth > 900
-            ) {
-
-                closeSidebar();
-
-            }
-
-        }
-    );
+console.log(
+    "MY HISTORY Dashboard loaded successfully."
+);
 
 
-
-    /* =====================================================
-       18. INITIALIZATION
-    ===================================================== */
-
-    console.log(
-        "%cMY HISTORY Dashboard Loaded Successfully!",
-        "color:#8f7dff;font-size:16px;font-weight:bold;"
-    );
-
-});
+/* =========================================================
+   END OF DASHBOARD JAVASCRIPT
+========================================================= */

@@ -1,55 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 
 <head>
+
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <meta name="description"
-          content="MY HISTORY - Create, manage and preserve your memories">
+    <meta
+        name="description"
+        content="MY HISTORY — Create, manage and explore your own stories."
+    >
 
-    <title>MY HISTORY | Dashboard</title>
-
-
-    <!-- ==============================
-         GOOGLE FONTS
-    =============================== -->
-
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet">
+    <title>MY HISTORY — Dashboard</title>
 
 
-    <!-- ==============================
-         FONT AWESOME
-    =============================== -->
+    <!-- Google Fonts -->
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
 
 
-    <!-- ==============================
-         GLOBAL CSS
-    =============================== -->
+    <!-- Font Awesome -->
 
-    <link rel="stylesheet"
-          href="assets/css/main.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
 
 
-    <!-- ==============================
-         DASHBOARD CSS
-    =============================== -->
+    <!-- Dashboard CSS -->
 
-    <link rel="stylesheet"
-          href="assets/css/pages/dashboard.css">
+    <link
+        rel="stylesheet"
+        href="assets/css/pages/dashboard.css"
+    >
 
 </head>
 
@@ -57,398 +58,460 @@
 <body>
 
 
-    <!-- =================================
-         BACKGROUND
-    ================================== -->
+<!-- =====================================================
+     DASHBOARD APP
+===================================================== -->
 
-    <div class="background">
-
-        <div class="stars"></div>
-
-        <div class="aurora aurora-left"></div>
-
-        <div class="aurora aurora-right"></div>
-
-    </div>
+<div class="dashboard-app">
 
 
+    <!-- =================================================
+         SIDEBAR
+    ================================================== -->
 
-    <!-- =================================
-         APP CONTAINER
-    ================================== -->
+    <aside
+        class="dashboard-sidebar"
+        id="dashboardSidebar"
+    >
 
-    <div class="app-container">
+
+        <!-- Logo -->
+
+        <a
+            href="index.html"
+            class="dashboard-logo"
+        >
+
+            <div class="dashboard-logo-icon">
+
+                <i class="fa-solid fa-book-open"></i>
+
+            </div>
+
+            <div class="dashboard-logo-text">
+
+                <strong>MY HISTORY</strong>
+
+                <span>CREATE YOUR WORLD</span>
+
+            </div>
+
+        </a>
 
 
-        <!-- =================================
-             SIDEBAR OVERLAY
-        ================================== -->
+        <!-- Sidebar Navigation -->
 
-        <div class="sidebar-overlay"
-             id="sidebarOverlay">
+        <nav class="dashboard-navigation">
+
+
+            <div class="navigation-label">
+
+                MAIN
+
+            </div>
+
+
+            <a
+                href="dashboard.html"
+                class="dashboard-nav-link active"
+            >
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>Home</span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="dashboard-nav-link"
+                data-section="stories"
+            >
+
+                <i class="fa-solid fa-book"></i>
+
+                <span>My Stories</span>
+
+                <span class="nav-count">
+                    4
+                </span>
+
+            </a>
+
+
+            <a
+                href="create-story.html"
+                class="dashboard-nav-link"
+            >
+
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                <span>Create Story</span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="dashboard-nav-link"
+                data-section="characters"
+            >
+
+                <i class="fa-solid fa-users"></i>
+
+                <span>Characters</span>
+
+            </a>
+
+
+            <div class="navigation-label">
+
+                TOOLS
+
+            </div>
+
+
+            <a
+                href="#"
+                class="dashboard-nav-link"
+                data-section="ai"
+            >
+
+                <i class="fa-solid fa-robot"></i>
+
+                <span>AI Assistant</span>
+
+                <span class="ai-online-dot"></span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="dashboard-nav-link"
+                data-section="templates"
+            >
+
+                <i class="fa-solid fa-layer-group"></i>
+
+                <span>Templates</span>
+
+            </a>
+
+
+            <div class="navigation-label">
+
+                ACCOUNT
+
+            </div>
+
+
+            <a
+                href="#"
+                class="dashboard-nav-link"
+                data-section="settings"
+            >
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Settings</span>
+
+            </a>
+
+
+            <a
+                href="index.html"
+                class="dashboard-nav-link"
+            >
+
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+
+                <span>Log Out</span>
+
+            </a>
+
+
+        </nav>
+
+
+        <!-- Sidebar Bottom -->
+
+        <div class="sidebar-bottom-card">
+
+
+            <div class="sidebar-bottom-icon">
+
+                <i class="fa-solid fa-sparkles"></i>
+
+            </div>
+
+
+            <strong>
+
+                Bring your story to life
+
+            </strong>
+
+
+            <p>
+
+                Create amazing stories with the power of AI.
+
+            </p>
+
+
+            <a
+                href="create-story.html"
+                class="sidebar-create-button"
+            >
+
+                Start Creating
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
         </div>
 
 
+    </aside>
 
-        <!-- =================================
-             SIDEBAR
-        ================================== -->
 
-        <aside class="sidebar"
-               id="sidebar">
 
+    <!-- =================================================
+         MAIN CONTENT
+    ================================================== -->
 
-            <!-- SIDEBAR HEADER -->
+    <main class="dashboard-main">
 
-            <div class="sidebar-header">
 
+        <!-- =============================================
+             TOPBAR
+        ============================================== -->
 
-                <!-- LOGO -->
+        <header class="dashboard-topbar">
 
-                <a href="dashboard.html"
-                   class="brand">
 
+            <div class="topbar-left">
 
-                    <div class="brand-logo">
 
-                        <img src="assets/images/logo/logo.png"
-                             alt="MY HISTORY Logo">
+                <!-- Mobile Menu -->
 
-                    </div>
-
-
-                    <div class="brand-info">
-
-                        <h2>MY HISTORY</h2>
-
-                        <span>Memory Studio</span>
-
-                    </div>
-
-
-                </a>
-
-
-                <!-- MOBILE CLOSE -->
-
-                <button class="sidebar-close"
-                        id="sidebarClose"
-                        aria-label="Close sidebar">
-
-                    <i class="fa-solid fa-xmark"></i>
-
-                </button>
-
-
-            </div>
-
-
-
-            <!-- =================================
-                 MAIN NAVIGATION
-            ================================== -->
-
-            <nav class="sidebar-navigation">
-
-
-                <p class="nav-label">
-                    WORKSPACE
-                </p>
-
-
-                <!-- DASHBOARD -->
-
-                <a href="dashboard.html"
-                   class="nav-item active">
-
-                    <span class="nav-icon">
-
-                        <i class="fa-solid fa-house"></i>
-
-                    </span>
-
-                    <span class="nav-text">
-                        Dashboard
-                    </span>
-
-                </a>
-
-
-                <!-- STORIES -->
-
-                <a href="#"
-                   class="nav-item">
-
-                    <span class="nav-icon">
-
-                        <i class="fa-solid fa-book-open"></i>
-
-                    </span>
-
-                    <span class="nav-text">
-                        My Stories
-                    </span>
-
-                    <span class="nav-badge">
-                        12
-                    </span>
-
-                </a>
-
-
-                <!-- CHARACTERS -->
-
-                <a href="#"
-                   class="nav-item">
-
-                    <span class="nav-icon">
-
-                        <i class="fa-solid fa-users"></i>
-
-                    </span>
-
-                    <span class="nav-text">
-                        Characters
-                    </span>
-
-                </a>
-
-
-                <!-- GALLERY -->
-
-                <a href="#"
-                   class="nav-item">
-
-                    <span class="nav-icon">
-
-                        <i class="fa-solid fa-images"></i>
-
-                    </span>
-
-                    <span class="nav-text">
-                        Gallery
-                    </span>
-
-                </a>
-
-
-                <!-- TIMELINE -->
-
-                <a href="#"
-                   class="nav-item">
-
-                    <span class="nav-icon">
-
-                        <i class="fa-solid fa-timeline"></i>
-
-                    </span>
-
-                    <span class="nav-text">
-                        Timeline
-                    </span>
-
-                </a>
-
-
-
-                <!-- AI STUDIO -->
-
-                <p class="nav-label nav-label-space">
-
-                    CREATIVE TOOLS
-
-                </p>
-
-
-                <a href="#"
-                   class="nav-item ai-nav-item">
-
-                    <span class="nav-icon ai-icon">
-
-                        <i class="fa-solid fa-wand-magic-sparkles"></i>
-
-                    </span>
-
-                    <span class="nav-text">
-                        AI Studio
-                    </span>
-
-                    <span class="new-badge">
-                        NEW
-                    </span>
-
-                </a>
-
-
-                <a href="#"
-                   class="nav-item">
-
-                    <span class="nav-icon">
-
-                        <i class="fa-solid fa-film"></i>
-
-                    </span>
-
-                    <span class="nav-text">
-                        Animation
-                    </span>
-
-                </a>
-
-
-
-                <!-- =================================
-                     BOTTOM NAVIGATION
-                ================================== -->
-
-                <div class="sidebar-bottom">
-
-
-                    <p class="nav-label">
-                        ACCOUNT
-                    </p>
-
-
-                    <a href="#"
-                       class="nav-item">
-
-                        <span class="nav-icon">
-
-                            <i class="fa-solid fa-user"></i>
-
-                        </span>
-
-                        <span class="nav-text">
-                            Profile
-                        </span>
-
-                    </a>
-
-
-                    <a href="#"
-                       class="nav-item">
-
-                        <span class="nav-icon">
-
-                            <i class="fa-solid fa-gear"></i>
-
-                        </span>
-
-                        <span class="nav-text">
-                            Settings
-                        </span>
-
-                    </a>
-
-
-                    <!-- LOGOUT -->
-
-                    <button class="logout-btn"
-                            id="logoutBtn">
-
-                        <span class="nav-icon">
-
-                            <i class="fa-solid fa-right-from-bracket"></i>
-
-                        </span>
-
-                        <span class="nav-text">
-                            Log Out
-                        </span>
-
-                    </button>
-
-
-                </div>
-
-
-            </nav>
-
-
-            <!-- =================================
-                 USER CARD
-            ================================== -->
-
-            <div class="sidebar-user">
-
-
-                <div class="user-avatar">
-
-                    <img src="assets/images/avatars/user.png"
-                         alt="User Avatar">
-
-                </div>
-
-
-                <div class="user-info">
-
-                    <strong>
-                        Rayhona
-                    </strong>
-
-                    <span>
-                        Creative Member
-                    </span>
-
-                </div>
-
-
-                <button class="user-more"
-                        aria-label="More options">
-
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
-
-                </button>
-
-
-            </div>
-
-
-        </aside>
-
-
-
-        <!-- =================================
-             MAIN CONTENT
-        ================================== -->
-
-        <main class="main-content">
-
-
-            <!-- =================================
-                 TOP NAVBAR
-            ================================== -->
-
-            <header class="top-navbar">
-
-
-                <!-- MOBILE MENU -->
-
-                <button class="menu-toggle"
-                        id="menuToggle"
-                        aria-label="Open menu">
+                <button
+                    class="mobile-menu-button"
+                    id="mobileMenuButton"
+                    aria-label="Open menu"
+                >
 
                     <i class="fa-solid fa-bars"></i>
 
                 </button>
 
 
-                <!-- SEARCH -->
+                <!-- Search -->
 
-                <div class="search-container">
+                <div class="dashboard-search">
 
+                    <i class="fa-solid fa-magnifying-glass"></i>
 
-                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
-
-
-                    <input type="search"
-                           id="globalSearch"
-                           placeholder="Search your memories..."
-                           autocomplete="off">
-
+                    <input
+                        type="search"
+                        id="dashboardSearch"
+                        placeholder="Search your stories..."
+                    >
 
                     <span class="search-shortcut">
+
                         Ctrl K
+
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="topbar-right">
+
+
+                <!-- Create Button -->
+
+                <a
+                    href="create-story.html"
+                    class="topbar-create-button"
+                >
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    <span>New Story</span>
+
+                </a>
+
+
+                <!-- Notification -->
+
+                <button
+                    class="notification-button"
+                    id="notificationButton"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="notification-badge">
+
+                        3
+
+                    </span>
+
+                </button>
+
+
+                <!-- User -->
+
+                <button
+                    class="dashboard-user"
+                    id="userMenuButton"
+                >
+
+                    <div class="dashboard-user-avatar">
+
+                        R
+
+                    </div>
+
+
+                    <div class="dashboard-user-info">
+
+                        <strong>
+
+                            Rayhona
+
+                        </strong>
+
+                        <span>
+
+                            Creator
+
+                        </span>
+
+                    </div>
+
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </button>
+
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =============================================
+             PAGE CONTENT
+        ============================================== -->
+
+        <div class="dashboard-content">
+
+
+            <!-- =========================================
+                 WELCOME
+            ========================================== -->
+
+            <section class="dashboard-welcome">
+
+
+                <div class="welcome-text">
+
+
+                    <span class="welcome-label">
+
+                        ✨ YOUR CREATIVE SPACE
+
+                    </span>
+
+
+                    <h1>
+
+                        Welcome back,
+                        <span>Rayhona!</span>
+
+                    </h1>
+
+
+                    <p>
+
+                        Your next amazing story is waiting
+                        to be created. What will you imagine today?
+
+                    </p>
+
+
+                </div>
+
+
+                <a
+                    href="create-story.html"
+                    class="welcome-create-button"
+                >
+
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                    Create New Story
+
+                </a>
+
+
+            </section>
+
+
+
+            <!-- =========================================
+                 STATISTICS
+            ========================================== -->
+
+            <section class="dashboard-statistics">
+
+
+                <!-- Stories -->
+
+                <div class="stat-card">
+
+
+                    <div class="stat-card-top">
+
+                        <div class="stat-icon purple">
+
+                            <i class="fa-solid fa-book-open"></i>
+
+                        </div>
+
+                        <span class="stat-trend">
+
+                            +12%
+
+                        </span>
+
+                    </div>
+
+
+                    <strong class="stat-number">
+
+                        12
+
+                    </strong>
+
+
+                    <span class="stat-label">
+
+                        Total Stories
+
                     </span>
 
 
@@ -456,433 +519,480 @@
 
 
 
-                <!-- NAVBAR ACTIONS -->
+                <!-- Characters -->
 
-                <div class="navbar-actions">
+                <div class="stat-card">
 
 
-                    <!-- CREATE -->
+                    <div class="stat-card-top">
 
-                    <button class="quick-create"
-                            id="quickCreate">
-
-                        <i class="fa-solid fa-plus"></i>
-
-                        <span>
-                            Create
-                        </span>
-
-                    </button>
-
-
-                    <!-- NOTIFICATIONS -->
-
-                    <button class="icon-button notification-button"
-                            id="notificationButton"
-                            aria-label="Notifications">
-
-                        <i class="fa-regular fa-bell"></i>
-
-                        <span class="notification-dot"></span>
-
-                    </button>
-
-
-                    <!-- THEME -->
-
-                    <button class="icon-button"
-                            id="themeToggle"
-                            aria-label="Toggle theme">
-
-                        <i class="fa-regular fa-moon"></i>
-
-                    </button>
-
-
-                    <!-- PROFILE -->
-
-                    <button class="navbar-profile"
-                            id="profileButton">
-
-
-                        <img src="assets/images/avatars/user.png"
-                             alt="Rayhona">
-
-
-                        <span>
-                            Rayhona
-                        </span>
-
-
-                        <i class="fa-solid fa-chevron-down"></i>
-
-
-                    </button>
-
-
-                </div>
-
-
-            </header>
-
-
-
-            <!-- =================================
-                 DASHBOARD CONTENT
-            ================================== -->
-
-            <div class="dashboard-content">
-
-
-
-                <!-- =================================
-                     WELCOME SECTION
-                ================================== -->
-
-                <section class="welcome-section">
-
-
-                    <div class="welcome-text">
-
-
-                        <span class="welcome-label">
-
-                            <i class="fa-regular fa-sun"></i>
-
-                            YOUR MEMORY SPACE
-
-                        </span>
-
-
-                        <h1>
-
-                            Welcome back,
-                            <span>Rayhona</span> 👋
-
-                        </h1>
-
-
-                        <p>
-
-                            Your stories, memories and special moments
-                            are waiting for you.
-
-                        </p>
-
-
-                    </div>
-
-
-                    <!-- QUICK ACTIONS -->
-
-                    <div class="welcome-actions">
-
-
-                        <button class="primary-button"
-                                id="createStoryButton">
-
-
-                            <i class="fa-solid fa-plus"></i>
-
-
-                            <span>
-                                Create Story
-                            </span>
-
-
-                        </button>
-
-
-                        <button class="secondary-button"
-                                id="aiStudioButton">
-
-
-                            <i class="fa-solid fa-wand-magic-sparkles"></i>
-
-
-                            <span>
-                                AI Studio
-                            </span>
-
-
-                        </button>
-
-
-                    </div>
-
-
-                </section>
-
-
-
-                <!-- =================================
-                     QUICK CREATE CARDS
-                ================================== -->
-
-                <section class="quick-create-section">
-
-
-                    <div class="section-heading">
-
-
-                        <div>
-
-                            <span class="section-overline">
-                                START CREATING
-                            </span>
-
-                            <h2>
-                                Bring your memories to life
-                            </h2>
-
-                        </div>
-
-
-                    </div>
-
-
-
-                    <div class="creation-grid">
-
-
-                        <!-- STORY -->
-
-                        <button class="creation-card story-card"
-                                data-action="story">
-
-
-                            <div class="creation-icon">
-
-                                <i class="fa-solid fa-book-open"></i>
-
-                            </div>
-
-
-                            <div class="creation-info">
-
-                                <h3>
-                                    New Story
-                                </h3>
-
-                                <p>
-                                    Turn your memories into a story.
-                                </p>
-
-                            </div>
-
-
-                            <i class="fa-solid fa-arrow-right creation-arrow"></i>
-
-
-                        </button>
-
-
-
-                        <!-- AI -->
-
-                        <button class="creation-card ai-card"
-                                data-action="ai">
-
-
-                            <div class="creation-icon">
-
-                                <i class="fa-solid fa-wand-magic-sparkles"></i>
-
-                            </div>
-
-
-                            <div class="creation-info">
-
-                                <h3>
-                                    AI Story
-                                </h3>
-
-                                <p>
-                                    Let AI help create your story.
-                                </p>
-
-                            </div>
-
-
-                            <i class="fa-solid fa-arrow-right creation-arrow"></i>
-
-
-                        </button>
-
-
-
-                        <!-- PHOTO -->
-
-                        <button class="creation-card photo-card"
-                                data-action="photo">
-
-
-                            <div class="creation-icon">
-
-                                <i class="fa-solid fa-cloud-arrow-up"></i>
-
-                            </div>
-
-
-                            <div class="creation-info">
-
-                                <h3>
-                                    Import Memories
-                                </h3>
-
-                                <p>
-                                    Add your photos and videos.
-                                </p>
-
-                            </div>
-
-
-                            <i class="fa-solid fa-arrow-right creation-arrow"></i>
-
-
-                        </button>
-
-
-                    </div>
-
-
-                </section>
-
-
-
-                <!-- =================================
-                     STATISTICS
-                ================================== -->
-
-                <section class="statistics-grid">
-
-
-                    <div class="stat-card">
-
-
-                        <div class="stat-icon purple">
-
-                            <i class="fa-solid fa-book"></i>
-
-                        </div>
-
-
-                        <div class="stat-content">
-
-                            <span>
-                                Total Stories
-                            </span>
-
-                            <strong>
-                                24
-                            </strong>
-
-                            <small class="positive">
-
-                                <i class="fa-solid fa-arrow-trend-up"></i>
-
-                                12% this month
-
-                            </small>
-
-                        </div>
-
-
-                    </div>
-
-
-
-                    <div class="stat-card">
-
-
-                        <div class="stat-icon blue">
-
-                            <i class="fa-solid fa-images"></i>
-
-                        </div>
-
-
-                        <div class="stat-content">
-
-                            <span>
-                                Memories
-                            </span>
-
-                            <strong>
-                                138
-                            </strong>
-
-                            <small class="positive">
-
-                                <i class="fa-solid fa-arrow-trend-up"></i>
-
-                                8% this month
-
-                            </small>
-
-                        </div>
-
-
-                    </div>
-
-
-
-                    <div class="stat-card">
-
-
-                        <div class="stat-icon gold">
+                        <div class="stat-icon pink">
 
                             <i class="fa-solid fa-users"></i>
 
                         </div>
 
+                        <span class="stat-trend">
 
-                        <div class="stat-content">
+                            +8%
 
-                            <span>
-                                Characters
-                            </span>
+                        </span>
 
-                            <strong>
-                                42
-                            </strong>
+                    </div>
 
-                            <small>
-                                5 new characters
-                            </small>
+
+                    <strong class="stat-number">
+
+                        28
+
+                    </strong>
+
+
+                    <span class="stat-label">
+
+                        Characters
+
+                    </span>
+
+
+                </div>
+
+
+
+                <!-- Projects -->
+
+                <div class="stat-card">
+
+
+                    <div class="stat-card-top">
+
+                        <div class="stat-icon blue">
+
+                            <i class="fa-solid fa-folder-open"></i>
 
                         </div>
+
+                        <span class="stat-trend">
+
+                            +5%
+
+                        </span>
+
+                    </div>
+
+
+                    <strong class="stat-number">
+
+                        7
+
+                    </strong>
+
+
+                    <span class="stat-label">
+
+                        Active Projects
+
+                    </span>
+
+
+                </div>
+
+
+
+                <!-- Completed -->
+
+                <div class="stat-card">
+
+
+                    <div class="stat-card-top">
+
+                        <div class="stat-icon green">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                        </div>
+
+                        <span class="stat-trend">
+
+                            +20%
+
+                        </span>
+
+                    </div>
+
+
+                    <strong class="stat-number">
+
+                        5
+
+                    </strong>
+
+
+                    <span class="stat-label">
+
+                        Completed Stories
+
+                    </span>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =========================================
+                 DASHBOARD GRID
+            ========================================== -->
+
+            <div class="dashboard-grid">
+
+
+                <!-- =====================================
+                     RECENT STORIES
+                ====================================== -->
+
+                <section class="dashboard-section stories-section">
+
+
+                    <div class="section-header">
+
+
+                        <div>
+
+                            <span class="section-label">
+
+                                YOUR CREATIONS
+
+                            </span>
+
+
+                            <h2>
+
+                                Recent Stories
+
+                            </h2>
+
+                        </div>
+
+
+                        <a
+                            href="#"
+                            class="view-all-link"
+                            data-section="stories"
+                        >
+
+                            View All
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
 
 
                     </div>
 
 
 
-                    <div class="stat-card">
+                    <!-- Stories -->
+
+                    <div
+                        class="stories-grid"
+                        id="storiesGrid"
+                    >
 
 
-                        <div class="stat-icon cyan">
+                        <!-- Story 1 -->
 
-                            <i class="fa-solid fa-clock"></i>
+                        <article
+                            class="story-card"
+                            data-title="The Last Moon"
+                        >
 
-                        </div>
+
+                            <div class="story-card-cover cover-purple">
 
 
-                        <div class="stat-content">
+                                <span class="story-status">
 
-                            <span>
-                                Creative Hours
-                            </span>
+                                    Draft
+
+                                </span>
+
+
+                                <div class="story-cover-icon">
+
+                                    <i class="fa-solid fa-moon"></i>
+
+                                </div>
+
+
+                                <button
+                                    class="story-menu-button"
+                                    aria-label="Story menu"
+                                >
+
+                                    <i class="fa-solid fa-ellipsis"></i>
+
+                                </button>
+
+
+                            </div>
+
+
+                            <div class="story-card-content">
+
+
+                                <h3>
+
+                                    The Last Moon
+
+                                </h3>
+
+
+                                <p>
+
+                                    A mysterious journey
+                                    through a forgotten world.
+
+                                </p>
+
+
+                                <div class="story-card-footer">
+
+
+                                    <span>
+
+                                        <i class="fa-regular fa-clock"></i>
+
+                                        2 days ago
+
+                                    </span>
+
+
+                                    <span>
+
+                                        <i class="fa-solid fa-users"></i>
+
+                                        4
+
+                                    </span>
+
+
+                                </div>
+
+
+                            </div>
+
+
+                        </article>
+
+
+
+                        <!-- Story 2 -->
+
+                        <article
+                            class="story-card"
+                            data-title="Dream Beyond Stars"
+                        >
+
+
+                            <div class="story-card-cover cover-pink">
+
+
+                                <span class="story-status completed">
+
+                                    Completed
+
+                                </span>
+
+
+                                <div class="story-cover-icon">
+
+                                    <i class="fa-solid fa-star"></i>
+
+                                </div>
+
+
+                                <button
+                                    class="story-menu-button"
+                                    aria-label="Story menu"
+                                >
+
+                                    <i class="fa-solid fa-ellipsis"></i>
+
+                                </button>
+
+
+                            </div>
+
+
+                            <div class="story-card-content">
+
+
+                                <h3>
+
+                                    Dream Beyond Stars
+
+                                </h3>
+
+
+                                <p>
+
+                                    A young dreamer discovers
+                                    a world beyond the stars.
+
+                                </p>
+
+
+                                <div class="story-card-footer">
+
+
+                                    <span>
+
+                                        <i class="fa-regular fa-clock"></i>
+
+                                        5 days ago
+
+                                    </span>
+
+
+                                    <span>
+
+                                        <i class="fa-solid fa-users"></i>
+
+                                        6
+
+                                    </span>
+
+
+                                </div>
+
+
+                            </div>
+
+
+                        </article>
+
+
+
+                        <!-- Story 3 -->
+
+                        <article
+                            class="story-card"
+                            data-title="The Secret Garden"
+                        >
+
+
+                            <div class="story-card-cover cover-blue">
+
+
+                                <span class="story-status">
+
+                                    Draft
+
+                                </span>
+
+
+                                <div class="story-cover-icon">
+
+                                    <i class="fa-solid fa-leaf"></i>
+
+                                </div>
+
+
+                                <button
+                                    class="story-menu-button"
+                                    aria-label="Story menu"
+                                >
+
+                                    <i class="fa-solid fa-ellipsis"></i>
+
+                                </button>
+
+
+                            </div>
+
+
+                            <div class="story-card-content">
+
+
+                                <h3>
+
+                                    The Secret Garden
+
+                                </h3>
+
+
+                                <p>
+
+                                    An enchanted garden hiding
+                                    an ancient secret.
+
+                                </p>
+
+
+                                <div class="story-card-footer">
+
+
+                                    <span>
+
+                                        <i class="fa-regular fa-clock"></i>
+
+                                        1 week ago
+
+                                    </span>
+
+
+                                    <span>
+
+                                        <i class="fa-solid fa-users"></i>
+
+                                        3
+
+                                    </span>
+
+
+                                </div>
+
+
+                            </div>
+
+
+                        </article>
+
+
+
+                        <!-- Create New Story -->
+
+                        <a
+                            href="create-story.html"
+                            class="create-story-card"
+                        >
+
+
+                            <div class="create-story-card-icon">
+
+                                <i class="fa-solid fa-plus"></i>
+
+                            </div>
+
 
                             <strong>
-                                48h
+
+                                Create New Story
+
                             </strong>
 
-                            <small>
-                                This month
-                            </small>
 
-                        </div>
+                            <span>
+
+                                Start a new adventure
+
+                            </span>
+
+
+                        </a>
 
 
                     </div>
@@ -892,266 +1002,129 @@
 
 
 
-                <!-- =================================
-                     MAIN GRID
-                ================================== -->
+                <!-- =====================================
+                     AI ASSISTANT
+                ====================================== -->
 
-                <div class="dashboard-grid">
-
-
-
-                    <!-- =================================
-                         RECENT STORIES
-                    ================================== -->
-
-                    <section class="dashboard-panel stories-panel">
+                <aside class="dashboard-ai-card">
 
 
-                        <div class="panel-header">
+                    <div class="ai-card-header">
 
 
-                            <div>
+                        <div class="ai-card-title">
 
-                                <span class="section-overline">
-                                    YOUR WORK
-                                </span>
 
-                                <h2>
-                                    Recent Stories
-                                </h2>
+                            <div class="ai-dashboard-icon">
+
+                                <i class="fa-solid fa-robot"></i>
 
                             </div>
 
 
-                            <a href="#"
-                               class="view-all">
+                            <div>
 
-                                View all
+                                <strong>
 
-                                <i class="fa-solid fa-arrow-right"></i>
+                                    AI Story Assistant
 
-                            </a>
+                                </strong>
+
+
+                                <span>
+
+                                    <i class="fa-solid fa-circle"></i>
+
+                                    Online
+
+                                </span>
+
+                            </div>
 
 
                         </div>
 
 
+                        <button
+                            class="ai-card-menu"
+                        >
 
-                        <div class="stories-list">
+                            <i class="fa-solid fa-ellipsis"></i>
 
+                        </button>
 
-                            <!-- STORY 1 -->
 
-                            <article class="story-item">
+                    </div>
 
 
-                                <div class="story-thumbnail story-one">
 
-                                    <i class="fa-solid fa-book-open"></i>
+                    <div class="ai-card-body">
 
-                                </div>
 
+                        <div class="ai-welcome-message">
 
-                                <div class="story-details">
 
-                                    <h3>
-                                        My Childhood Memories
-                                    </h3>
+                            <div class="ai-mini-avatar">
 
-                                    <p>
+                                ✨
 
-                                        <i class="fa-regular fa-clock"></i>
+                            </div>
 
-                                        Edited 2 hours ago
 
-                                    </p>
+                            <p>
 
+                                Hi Rayhona! 👋
+                                I'm here to help you bring
+                                your stories to life.
 
-                                    <div class="story-tags">
-
-                                        <span>
-                                            Childhood
-                                        </span>
-
-                                        <span>
-                                            Personal
-                                        </span>
-
-                                    </div>
-
-                                </div>
-
-
-                                <div class="story-status completed">
-
-                                    Completed
-
-                                </div>
-
-
-                                <button class="more-button">
-
-                                    <i class="fa-solid fa-ellipsis-vertical"></i>
-
-                                </button>
-
-
-                            </article>
-
-
-
-                            <!-- STORY 2 -->
-
-                            <article class="story-item">
-
-
-                                <div class="story-thumbnail story-two">
-
-                                    <i class="fa-solid fa-plane"></i>
-
-                                </div>
-
-
-                                <div class="story-details">
-
-                                    <h3>
-                                        My Journey to Japan
-                                    </h3>
-
-                                    <p>
-
-                                        <i class="fa-regular fa-clock"></i>
-
-                                        Edited yesterday
-
-                                    </p>
-
-
-                                    <div class="story-tags">
-
-                                        <span>
-                                            Travel
-                                        </span>
-
-                                        <span>
-                                            Adventure
-                                        </span>
-
-                                    </div>
-
-                                </div>
-
-
-                                <div class="story-status editing">
-
-                                    Editing
-
-                                </div>
-
-
-                                <button class="more-button">
-
-                                    <i class="fa-solid fa-ellipsis-vertical"></i>
-
-                                </button>
-
-
-                            </article>
-
-
-
-                            <!-- STORY 3 -->
-
-                            <article class="story-item">
-
-
-                                <div class="story-thumbnail story-three">
-
-                                    <i class="fa-solid fa-heart"></i>
-
-                                </div>
-
-
-                                <div class="story-details">
-
-                                    <h3>
-                                        Family Moments
-                                    </h3>
-
-                                    <p>
-
-                                        <i class="fa-regular fa-clock"></i>
-
-                                        Edited 3 days ago
-
-                                    </p>
-
-
-                                    <div class="story-tags">
-
-                                        <span>
-                                            Family
-                                        </span>
-
-                                        <span>
-                                            Memories
-                                        </span>
-
-                                    </div>
-
-                                </div>
-
-
-                                <div class="story-status draft">
-
-                                    Draft
-
-                                </div>
-
-
-                                <button class="more-button">
-
-                                    <i class="fa-solid fa-ellipsis-vertical"></i>
-
-                                </button>
-
-
-                            </article>
+                            </p>
 
 
                         </div>
 
 
-                    </section>
+                        <p class="ai-question">
+
+                            What would you like to create today?
+
+                        </p>
 
 
-
-                    <!-- =================================
-                         MEMORY TIMELINE
-                    ================================== -->
-
-                    <section class="dashboard-panel timeline-panel">
+                        <div class="ai-quick-actions">
 
 
-                        <div class="panel-header">
+                            <button
+                                class="ai-quick-action"
+                                data-prompt="Help me create a fantasy story"
+                            >
+
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                                Create a story idea
+
+                            </button>
 
 
-                            <div>
+                            <button
+                                class="ai-quick-action"
+                                data-prompt="Help me create a character"
+                            >
 
-                                <span class="section-overline">
-                                    YOUR JOURNEY
-                                </span>
+                                <i class="fa-solid fa-user-plus"></i>
 
-                                <h2>
-                                    Memory Timeline
-                                </h2>
+                                Create a character
 
-                            </div>
+                            </button>
 
 
-                            <button class="panel-action">
+                            <button
+                                class="ai-quick-action"
+                                data-prompt="Give me a plot twist"
+                            >
 
-                                <i class="fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-lightbulb"></i>
+
+                                Get inspiration
 
                             </button>
 
@@ -1159,144 +1132,19 @@
                         </div>
 
 
+                    </div>
 
-                        <div class="timeline">
 
+                    <div class="ai-card-footer">
 
-                            <div class="timeline-item">
 
+                        <a
+                            href="#"
+                            class="open-ai-button"
+                            data-section="ai"
+                        >
 
-                                <span class="timeline-dot"></span>
-
-
-                                <div>
-
-                                    <strong>
-                                        2026
-                                    </strong>
-
-                                    <p>
-                                        12 memories
-                                    </p>
-
-                                </div>
-
-
-                            </div>
-
-
-                            <div class="timeline-item">
-
-
-                                <span class="timeline-dot"></span>
-
-
-                                <div>
-
-                                    <strong>
-                                        2025
-                                    </strong>
-
-                                    <p>
-                                        28 memories
-                                    </p>
-
-                                </div>
-
-
-                            </div>
-
-
-                            <div class="timeline-item">
-
-
-                                <span class="timeline-dot"></span>
-
-
-                                <div>
-
-                                    <strong>
-                                        2024
-                                    </strong>
-
-                                    <p>
-                                        34 memories
-                                    </p>
-
-                                </div>
-
-
-                            </div>
-
-
-                            <div class="timeline-item">
-
-
-                                <span class="timeline-dot"></span>
-
-
-                                <div>
-
-                                    <strong>
-                                        2023
-                                    </strong>
-
-                                    <p>
-                                        21 memories
-                                    </p>
-
-                                </div>
-
-
-                            </div>
-
-
-                        </div>
-
-
-                        <button class="timeline-button">
-
-                            Explore full timeline
-
-                            <i class="fa-solid fa-arrow-right"></i>
-
-                        </button>
-
-
-                    </section>
-
-
-                </div>
-
-
-
-                <!-- =================================
-                     FAVORITE CHARACTERS
-                ================================== -->
-
-                <section class="dashboard-panel characters-panel">
-
-
-                    <div class="panel-header">
-
-
-                        <div>
-
-                            <span class="section-overline">
-                                YOUR PEOPLE
-                            </span>
-
-                            <h2>
-                                Favorite Characters
-                            </h2>
-
-                        </div>
-
-
-                        <a href="#"
-                           class="view-all">
-
-                            View all
+                            Open AI Assistant
 
                             <i class="fa-solid fa-arrow-right"></i>
 
@@ -1306,203 +1154,370 @@
                     </div>
 
 
-
-                    <div class="characters-grid">
-
-
-                        <div class="character-card">
-
-                            <div class="character-avatar">
-
-                                <img src="assets/images/avatars/user.png"
-                                     alt="Character">
-
-                            </div>
-
-                            <h3>
-                                My Character
-                            </h3>
-
-                            <span>
-                                Main Character
-                            </span>
-
-                        </div>
-
-
-                        <button class="character-add">
-
-                            <i class="fa-solid fa-plus"></i>
-
-                            <span>
-                                Add Character
-                            </span>
-
-                        </button>
-
-
-                    </div>
-
-
-                </section>
-
-
-
-                <!-- =================================
-                     FOOTER
-                ================================== -->
-
-                <footer class="dashboard-footer">
-
-
-                    <p>
-
-                        © 2026
-                        <strong>MY HISTORY</strong>.
-
-                        Preserve your story. Create your history.
-
-                    </p>
-
-
-                    <div>
-
-                        <a href="#">
-                            Privacy
-                        </a>
-
-                        <a href="#">
-                            Help
-                        </a>
-
-                        <a href="#">
-                            Contact
-                        </a>
-
-                    </div>
-
-
-                </footer>
+                </aside>
 
 
             </div>
 
 
-        </main>
+
+            <!-- =========================================
+                 QUICK CREATE
+            ========================================== -->
+
+            <section class="quick-create-section">
+
+
+                <div class="section-header">
+
+
+                    <div>
+
+                        <span class="section-label">
+
+                            QUICK START
+
+                        </span>
+
+
+                        <h2>
+
+                            What do you want to create?
+
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="quick-create-grid">
+
+
+                    <!-- Story -->
+
+                    <a
+                        href="create-story.html"
+                        class="quick-create-card"
+                    >
+
+
+                        <div class="quick-create-icon purple">
+
+                            <i class="fa-solid fa-book-open"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+
+                                New Story
+
+                            </strong>
+
+
+                            <span>
+
+                                Create your own story
+
+                            </span>
+
+                        </div>
+
+
+                        <i class="fa-solid fa-arrow-right arrow-icon"></i>
+
+
+                    </a>
+
+
+
+                    <!-- Character -->
+
+                    <button
+                        class="quick-create-card"
+                        data-section="characters"
+                    >
+
+
+                        <div class="quick-create-icon pink">
+
+                            <i class="fa-solid fa-user-astronaut"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+
+                                New Character
+
+                            </strong>
+
+
+                            <span>
+
+                                Build a unique character
+
+                            </span>
+
+                        </div>
+
+
+                        <i class="fa-solid fa-arrow-right arrow-icon"></i>
+
+
+                    </button>
+
+
+
+                    <!-- AI -->
+
+                    <button
+                        class="quick-create-card"
+                        data-section="ai"
+                    >
+
+
+                        <div class="quick-create-icon blue">
+
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+
+                                AI Inspiration
+
+                            </strong>
+
+
+                            <span>
+
+                                Get creative ideas
+
+                            </span>
+
+                        </div>
+
+
+                        <i class="fa-solid fa-arrow-right arrow-icon"></i>
+
+
+                    </button>
+
+
+
+                    <!-- Template -->
+
+                    <button
+                        class="quick-create-card"
+                        data-section="templates"
+                    >
+
+
+                        <div class="quick-create-icon green">
+
+                            <i class="fa-solid fa-layer-group"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+
+                                Use Template
+
+                            </strong>
+
+
+                            <span>
+
+                                Start from a template
+
+                            </span>
+
+                        </div>
+
+
+                        <i class="fa-solid fa-arrow-right arrow-icon"></i>
+
+
+                    </button>
+
+
+                </div>
+
+
+            </section>
+
+
+
+        </div>
+
+
+        <!-- END DASHBOARD CONTENT -->
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     NOTIFICATION PANEL
+===================================================== -->
+
+<div
+    class="notification-panel"
+    id="notificationPanel"
+>
+
+
+    <div class="notification-panel-header">
+
+
+        <strong>
+
+            Notifications
+
+        </strong>
+
+
+        <button
+            id="closeNotificationPanel"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
 
 
     </div>
 
 
-
-    <!-- =================================
-         CREATE STORY MODAL
-    ================================== -->
-
-    <div class="modal-overlay"
-         id="createModal">
+    <div class="notification-list">
 
 
-        <div class="create-modal">
+        <div class="notification-item">
 
 
-            <button class="modal-close"
-                    id="modalClose">
+            <div class="notification-item-icon purple">
 
-                <i class="fa-solid fa-xmark"></i>
-
-            </button>
-
-
-            <div class="modal-header">
-
-
-                <div class="modal-icon">
-
-                    <i class="fa-solid fa-wand-magic-sparkles"></i>
-
-                </div>
-
-
-                <h2>
-                    Create Something New
-                </h2>
-
-
-                <p>
-                    Choose how you want to start your next memory.
-                </p>
-
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
 
             </div>
 
 
+            <div>
 
-            <div class="modal-options">
+                <strong>
 
+                    Story idea generated
 
-                <button class="modal-option">
-
-                    <i class="fa-solid fa-book-open"></i>
-
-                    <div>
-
-                        <strong>
-                            Create a Story
-                        </strong>
-
-                        <span>
-                            Build your own story from scratch.
-                        </span>
-
-                    </div>
-
-                    <i class="fa-solid fa-chevron-right"></i>
-
-                </button>
+                </strong>
 
 
-                <button class="modal-option">
+                <span>
 
-                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    Your AI assistant created a new idea.
 
-                    <div>
-
-                        <strong>
-                            AI Story
-                        </strong>
-
-                        <span>
-                            Let AI help you tell your story.
-                        </span>
-
-                    </div>
-
-                    <i class="fa-solid fa-chevron-right"></i>
-
-                </button>
+                </span>
 
 
-                <button class="modal-option">
+                <small>
 
-                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    10 minutes ago
 
-                    <div>
+                </small>
 
-                        <strong>
-                            Import Memories
-                        </strong>
+            </div>
 
-                        <span>
-                            Upload photos and videos.
-                        </span>
 
-                    </div>
+        </div>
 
-                    <i class="fa-solid fa-chevron-right"></i>
 
-                </button>
 
+        <div class="notification-item">
+
+
+            <div class="notification-item-icon green">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+
+                    Story completed
+
+                </strong>
+
+
+                <span>
+
+                    Dream Beyond Stars is complete.
+
+                </span>
+
+
+                <small>
+
+                    Yesterday
+
+                </small>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="notification-item">
+
+
+            <div class="notification-item-icon pink">
+
+                <i class="fa-solid fa-heart"></i>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+
+                    Welcome to MY HISTORY
+
+                </strong>
+
+
+                <span>
+
+                    Start creating your first story.
+
+                </span>
+
+
+                <small>
+
+                    2 days ago
+
+                </small>
 
             </div>
 
@@ -1513,12 +1528,109 @@
     </div>
 
 
+</div>
 
-    <!-- =================================
-         JAVASCRIPT
-    ================================== -->
 
-    <script src="assets/js/dashboard.js"></script>
+
+<!-- =====================================================
+     USER MENU
+===================================================== -->
+
+<div
+    class="user-dropdown"
+    id="userDropdown"
+>
+
+
+    <div class="user-dropdown-header">
+
+
+        <div class="dashboard-user-avatar large">
+
+            R
+
+        </div>
+
+
+        <div>
+
+            <strong>
+
+                Rayhona
+
+            </strong>
+
+
+            <span>
+
+                rayhona@example.com
+
+            </span>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="user-dropdown-divider"></div>
+
+
+    <a href="#">
+
+        <i class="fa-regular fa-user"></i>
+
+        My Profile
+
+    </a>
+
+
+    <a href="#">
+
+        <i class="fa-solid fa-gear"></i>
+
+        Settings
+
+    </a>
+
+
+    <div class="user-dropdown-divider"></div>
+
+
+    <a
+        href="index.html"
+        class="logout-link"
+    >
+
+        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+
+        Log Out
+
+    </a>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     OVERLAY
+===================================================== -->
+
+<div
+    class="dashboard-overlay"
+    id="dashboardOverlay"
+></div>
+
+
+
+<!-- =====================================================
+     DASHBOARD JS
+===================================================== -->
+
+<script
+    src="assets/js/dashboard.js"
+></script>
 
 
 </body>

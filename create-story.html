@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        MY HISTORY — Create Story
+    </title>
+
+
+    <!-- MAIN CSS -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/style.css"
+    >
+
+
+    <!-- CREATE STORY CSS -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/pages/create-story.css"
+    >
+
+</head>
+
+
+<body class="create-story-page">
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="create-story-navbar">
+
+
+        <!-- LOGO -->
+
+        <div class="create-story-logo">
+
+            <span class="create-logo-icon">
+                ✨
+            </span>
+
+            <span>
+                MY HISTORY
+            </span>
+
+        </div>
+
+
+
+        <!-- NAV ACTIONS -->
+
+        <div class="create-story-nav-actions">
+
+            <button
+                class="create-nav-btn"
+                onclick="goBack()"
+            >
+                ← Orqaga
+            </button>
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="create-story-container">
+
+
+        <!-- =========================
+             PAGE HEADING
+        ========================== -->
+
+        <section class="create-story-heading">
+
+
+            <span class="create-story-label">
+                ✨ AI STORY CREATOR
+            </span>
+
+
+            <h1>
+                O'z hikoyangizni yarating
+            </h1>
+
+
+            <p>
+                G'oyangizni yozing, uslubni tanlang
+                va MY HISTORY AI siz uchun
+                noyob hikoya yaratadi.
+            </p>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             CREATOR GRID
+        ========================== -->
+
+        <section class="create-story-grid">
+
+
+            <!-- =========================
+                 LEFT — FORM
+            ========================== -->
+
+            <div class="create-story-main">
+
+
+                <!-- STORY IDEA -->
+
+                <div class="create-card">
+
+
+                    <div class="create-card-header">
+
+                        <div class="create-card-icon">
+                            💡
+                        </div>
+
+
+                        <div>
+
+                            <h2>
+                                Hikoya g'oyasi
+                            </h2>
+
+                            <p>
+                                Hikoyangiz qanday bo'lishini
+                                tasvirlab bering.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- STORY TITLE -->
+
+                    <div class="create-form-group">
+
+                        <label>
+                            Hikoya nomi
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="storyTitle"
+                            placeholder="Masalan: Sirli Olamga Sayohat"
+                        >
+
+                    </div>
+
+
+
+                    <!-- STORY IDEA -->
+
+                    <div class="create-form-group">
+
+                        <label>
+                            Hikoya g'oyasi
+                        </label>
+
+
+                        <textarea
+                            id="storyIdea"
+                            rows="7"
+                            placeholder="Masalan: Oddiy qiz sirli portal orqali boshqa dunyoga tushib qoladi..."
+                        ></textarea>
+
+
+                        <div class="character-count">
+
+                            <span id="ideaCount">
+                                0
+                            </span>
+
+                            / 1000
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =========================
+                     GENRE
+                ========================== -->
+
+                <div class="create-card">
+
+
+                    <div class="create-card-header">
+
+                        <div class="create-card-icon">
+                            🎭
+                        </div>
+
+
+                        <div>
+
+                            <h2>
+                                Janr tanlang
+                            </h2>
+
+                            <p>
+                                Hikoyangiz qaysi janrda bo'ladi?
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div
+                        class="genre-grid"
+                        id="genreGrid"
+                    >
+
+
+                        <!-- FANTASY -->
+
+                        <button
+                            class="genre-option active"
+                            data-genre="Fantasy"
+                        >
+
+                            <span>
+                                🧙‍♀️
+                            </span>
+
+                            <strong>
+                                Fantasy
+                            </strong>
+
+                            <small>
+                                Sehrli dunyo
+                            </small>
+
+                        </button>
+
+
+
+                        <!-- ROMANCE -->
+
+                        <button
+                            class="genre-option"
+                            data-genre="Romance"
+                        >
+
+                            <span>
+                                💖
+                            </span>
+
+                            <strong>
+                                Romance
+                            </strong>
+
+                            <small>
+                                Sevgi hikoyasi
+                            </small>
+
+                        </button>
+
+
+
+                        <!-- ADVENTURE -->
+
+                        <button
+                            class="genre-option"
+                            data-genre="Adventure"
+                        >
+
+                            <span>
+                                🗺️
+                            </span>
+
+                            <strong>
+                                Adventure
+                            </strong>
+
+                            <small>
+                                Sarguzasht
+                            </small>
+
+                        </button>
+
+
+
+                        <!-- MYSTERY -->
+
+                        <button
+                            class="genre-option"
+                            data-genre="Mystery"
+                        >
+
+                            <span>
+                                🔍
+                            </span>
+
+                            <strong>
+                                Mystery
+                            </strong>
+
+                            <small>
+                                Sirli voqealar
+                            </small>
+
+                        </button>
+
+
+
+                        <!-- COMEDY -->
+
+                        <button
+                            class="genre-option"
+                            data-genre="Comedy"
+                        >
+
+                            <span>
+                                😂
+                            </span>
+
+                            <strong>
+                                Comedy
+                            </strong>
+
+                            <small>
+                                Kulgili hikoya
+                            </small>
+
+                        </button>
+
+
+
+                        <!-- HORROR -->
+
+                        <button
+                            class="genre-option"
+                            data-genre="Horror"
+                        >
+
+                            <span>
+                                👻
+                            </span>
+
+                            <strong>
+                                Horror
+                            </strong>
+
+                            <small>
+                                Qo'rqinchli
+                            </small>
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =========================
+                     LANGUAGE
+                ========================== -->
+
+                <div class="create-card">
+
+
+                    <div class="create-card-header">
+
+                        <div class="create-card-icon">
+                            🌍
+                        </div>
+
+
+                        <div>
+
+                            <h2>
+                                Til
+                            </h2>
+
+                            <p>
+                                Hikoya qaysi tilda yaratiladi?
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="language-options">
+
+
+                        <button
+                            class="language-option active"
+                            data-language="O'zbek tili"
+                        >
+
+                            🇺🇿
+
+                            <span>
+                                O'zbek tili
+                            </span>
+
+                        </button>
+
+
+
+                        <button
+                            class="language-option"
+                            data-language="Русский"
+                        >
+
+                            🇷🇺
+
+                            <span>
+                                Русский
+                            </span>
+
+                        </button>
+
+
+
+                        <button
+                            class="language-option"
+                            data-language="English"
+                        >
+
+                            🇬🇧
+
+                            <span>
+                                English
+                            </span>
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =========================
+                     VISUAL STYLE
+                ========================== -->
+
+                <div class="create-card">
+
+
+                    <div class="create-card-header">
+
+                        <div class="create-card-icon">
+                            🎨
+                        </div>
+
+
+                        <div>
+
+                            <h2>
+                                Vizual uslub
+                            </h2>
+
+                            <p>
+                                Hikoyangiz qanday ko'rinishda bo'ladi?
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="visual-style-grid">
+
+
+                        <button
+                            class="visual-style-option active"
+                            data-style="Anime"
+                        >
+
+                            <div class="visual-style-icon">
+                                🌸
+                            </div>
+
+                            <strong>
+                                Anime
+                            </strong>
+
+                            <small>
+                                Japanese Anime
+                            </small>
+
+                        </button>
+
+
+
+                        <button
+                            class="visual-style-option"
+                            data-style="Cartoon"
+                        >
+
+                            <div class="visual-style-icon">
+                                🎨
+                            </div>
+
+                            <strong>
+                                Cartoon
+                            </strong>
+
+                            <small>
+                                3D Cartoon
+                            </small>
+
+                        </button>
+
+
+
+                        <button
+                            class="visual-style-option"
+                            data-style="Dorama"
+                        >
+
+                            <div class="visual-style-icon">
+                                🎬
+                            </div>
+
+                            <strong>
+                                Dorama
+                            </strong>
+
+                            <small>
+                                K-Drama Style
+                            </small>
+
+                        </button>
+
+
+
+                        <button
+                            class="visual-style-option"
+                            data-style="Cinematic"
+                        >
+
+                            <div class="visual-style-icon">
+                                🎥
+                            </div>
+
+                            <strong>
+                                Cinematic
+                            </strong>
+
+                            <small>
+                                Realistic
+                            </small>
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =========================
+                     CREATE BUTTON
+                ========================== -->
+
+                <button
+                    class="generate-story-btn"
+                    onclick="generateStory()"
+                >
+
+                    <span>
+                        ✨
+                    </span>
+
+                    <span>
+                        AI bilan hikoya yaratish
+                    </span>
+
+                    <span>
+                        →
+                    </span>
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- =========================
+                 RIGHT PREVIEW
+            ========================== -->
+
+            <aside class="create-story-sidebar">
+
+
+                <!-- PREVIEW CARD -->
+
+                <div class="story-preview-card">
+
+
+                    <div class="preview-card-header">
+
+                        <span>
+                            ✨ PREVIEW
+                        </span>
+
+                        <span class="preview-status">
+                            Ready
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="preview-cover">
+
+
+                        <div class="preview-cover-glow">
+                        </div>
+
+
+                        <div class="preview-cover-content">
+
+                            <span>
+                                AI STORY
+                            </span>
+
+
+                            <h2
+                                id="previewTitle"
+                            >
+                                Sizning hikoyangiz
+                            </h2>
+
+
+                            <p
+                                id="previewGenre"
+                            >
+                                Fantasy
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- PREVIEW INFO -->
+
+                    <div class="preview-info">
+
+
+                        <div class="preview-info-item">
+
+                            <span>
+                                🌍 Til
+                            </span>
+
+                            <strong
+                                id="previewLanguage"
+                            >
+                                O'zbek tili
+                            </strong>
+
+                        </div>
+
+
+
+                        <div class="preview-info-item">
+
+                            <span>
+                                🎨 Uslub
+                            </span>
+
+                            <strong
+                                id="previewStyle"
+                            >
+                                Anime
+                            </strong>
+
+                        </div>
+
+
+
+                        <div class="preview-info-item">
+
+                            <span>
+                                👥 Qahramonlar
+                            </span>
+
+                            <strong>
+                                AI
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- AI TIP -->
+
+                <div class="ai-tip-card">
+
+
+                    <div class="ai-tip-icon">
+                        🤖
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            AI maslahat
+                        </h3>
+
+
+                        <p>
+                            Hikoya g'oyangizni qanchalik
+                            batafsil yozsangiz, AI shunchalik
+                            qiziqarli hikoya yaratadi.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+            </aside>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script
+        src="assets/js/create-story.js"
+    ></script>
+
+
+</body>
+
+</html>

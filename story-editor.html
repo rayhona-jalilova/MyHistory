@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>MY HISTORY — Story Editor</title>
+
+
+    <!-- Main CSS -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/style.css"
+    >
+
+
+    <!-- Story Editor CSS -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/pages/story-editor.css"
+    >
+
+</head>
+
+
+<body class="story-editor-page">
+
+
+    <!-- =========================
+         TOP NAVIGATION
+    ========================== -->
+
+    <header class="story-editor-navbar">
+
+        <div class="story-editor-logo">
+
+            <span class="logo-icon">
+                ✨
+            </span>
+
+            <span>
+                MY HISTORY
+            </span>
+
+        </div>
+
+
+        <div class="story-editor-nav-actions">
+
+            <button
+                class="editor-nav-btn"
+                onclick="goBack()"
+            >
+                ← Orqaga
+            </button>
+
+
+            <button
+                class="editor-nav-btn editor-save-btn"
+                onclick="saveEditedStory()"
+            >
+                💾 Saqlash
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         MAIN EDITOR
+    ========================== -->
+
+    <main class="story-editor-container">
+
+
+        <!-- =========================
+             PAGE TITLE
+        ========================== -->
+
+        <section class="story-editor-heading">
+
+            <div>
+
+                <span class="editor-label">
+                    STORY EDITOR
+                </span>
+
+                <h1>
+                    Hikoyangizni tahrirlang
+                </h1>
+
+                <p>
+                    Hikoya, qahramonlar va voqealarni
+                    o'zingiz xohlagandek o'zgartiring.
+                </p>
+
+            </div>
+
+
+            <button
+                class="preview-btn"
+                onclick="previewStory()"
+            >
+                👁️ Preview
+            </button>
+
+        </section>
+
+
+
+        <!-- =========================
+             EDITOR GRID
+        ========================== -->
+
+        <section class="story-editor-grid">
+
+
+            <!-- =========================
+                 LEFT SIDE
+            ========================== -->
+
+            <div class="story-editor-main">
+
+
+                <!-- STORY INFORMATION -->
+
+                <div class="editor-card">
+
+                    <div class="editor-card-header">
+
+                        <h2>
+                            📖 Hikoya ma'lumotlari
+                        </h2>
+
+                    </div>
+
+
+                    <div class="editor-form">
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Hikoya nomi
+                            </label>
+
+                            <input
+                                type="text"
+                                id="storyTitle"
+                                value="Sirli Olamga Sayohat"
+                                placeholder="Hikoya nomini kiriting"
+                            >
+
+                        </div>
+
+
+
+                        <div class="form-row">
+
+
+                            <div class="form-group">
+
+                                <label>
+                                    Janr
+                                </label>
+
+                                <select id="storyGenre">
+
+                                    <option>
+                                        Fantasy
+                                    </option>
+
+                                    <option>
+                                        Romance
+                                    </option>
+
+                                    <option>
+                                        Adventure
+                                    </option>
+
+                                    <option>
+                                        Mystery
+                                    </option>
+
+                                    <option>
+                                        Comedy
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <div class="form-group">
+
+                                <label>
+                                    Til
+                                </label>
+
+                                <select id="storyLanguage">
+
+                                    <option>
+                                        O'zbek tili
+                                    </option>
+
+                                    <option>
+                                        Русский
+                                    </option>
+
+                                    <option>
+                                        English
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Qisqacha tavsif
+                            </label>
+
+                            <textarea
+                                id="storyDescription"
+                                rows="5"
+                            >Bir kuni oddiy qiz o'z hayotidagi eng katta sarguzashtga duch keladi.</textarea>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- STORY CONTENT -->
+
+                <div class="editor-card">
+
+                    <div class="editor-card-header">
+
+                        <h2>
+                            📝 Hikoya matni
+                        </h2>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Hikoya
+                        </label>
+
+                        <textarea
+                            id="storyContent"
+                            class="story-content-editor"
+                            rows="15"
+                        >Bir kuni Laylo oddiy kunlardan birini o'tkazayotgan edi.
+
+Ammo u o'rmonda sirli yorug'likni ko'rib qoldi.
+
+Laylo bu sirli yorug'lik ortidan borishga qaror qildi.
+
+U bilmagan holda, bu qaror uning hayotini butunlay o'zgartirib yuboradigan sarguzashtning boshlanishi edi...</textarea>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CHAPTERS -->
+
+                <div class="editor-card">
+
+                    <div class="editor-card-header">
+
+                        <h2>
+                            📚 Chapterlar
+                        </h2>
+
+                        <button
+                            class="add-chapter-btn"
+                            onclick="addChapter()"
+                        >
+                            + Chapter qo'shish
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        class="chapter-editor-list"
+                        id="chapterList"
+                    >
+
+
+                        <!-- CHAPTER -->
+
+                        <div class="chapter-editor-item">
+
+                            <div class="chapter-number">
+                                01
+                            </div>
+
+
+                            <div class="chapter-editor-content">
+
+                                <input
+                                    type="text"
+                                    value="Sirli boshlanish"
+                                    placeholder="Chapter nomi"
+                                >
+
+                                <textarea
+                                    rows="4"
+                                >Laylo sirli portalni topadi va noma'lum dunyoga o'tadi.</textarea>
+
+                            </div>
+
+
+                            <button
+                                class="delete-chapter-btn"
+                                onclick="deleteChapter(this)"
+                            >
+                                ×
+                            </button>
+
+                        </div>
+
+
+
+                        <!-- CHAPTER -->
+
+                        <div class="chapter-editor-item">
+
+                            <div class="chapter-number">
+                                02
+                            </div>
+
+
+                            <div class="chapter-editor-content">
+
+                                <input
+                                    type="text"
+                                    value="Sirli dunyo"
+                                    placeholder="Chapter nomi"
+                                >
+
+                                <textarea
+                                    rows="4"
+                                >Laylo yangi dunyoda Amir va Zebo bilan uchrashadi.</textarea>
+
+                            </div>
+
+
+                            <button
+                                class="delete-chapter-btn"
+                                onclick="deleteChapter(this)"
+                            >
+                                ×
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 RIGHT SIDEBAR
+            ========================== -->
+
+            <aside class="story-editor-sidebar">
+
+
+                <!-- AI ASSISTANT -->
+
+                <div class="ai-assistant-card">
+
+
+                    <div class="ai-assistant-header">
+
+                        <div class="ai-avatar">
+                            🤖
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                MY HISTORY AI
+                            </h3>
+
+                            <span>
+                                Online
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div
+                        class="ai-chat"
+                        id="aiChat"
+                    >
+
+                        <div class="ai-message">
+
+                            Salom! 👋
+
+                            <br><br>
+
+                            Men sizning hikoyangizni
+                            yaxshilashga yordam beraman.
+
+                            <br><br>
+
+                            Siz menga hikoya yaratish,
+                            qahramonlar yoki voqealar
+                            haqida savol berishingiz mumkin.
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="ai-input-area">
+
+                        <input
+                            type="text"
+                            id="aiInput"
+                            placeholder="AI Assistant'ga yozing..."
+                            onkeydown="handleAIKey(event)"
+                        >
+
+                        <button
+                            onclick="sendAIMessage()"
+                        >
+                            ➤
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CHARACTERS -->
+
+                <div class="editor-card characters-editor-card">
+
+                    <div class="editor-card-header">
+
+                        <h2>
+                            👥 Qahramonlar
+                        </h2>
+
+                        <button
+                            class="add-character-btn"
+                            onclick="addCharacter()"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        class="character-editor-list"
+                        id="characterList"
+                    >
+
+
+                        <div class="character-editor-item">
+
+                            <div class="character-avatar">
+                                👩
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Laylo
+                                </strong>
+
+                                <span>
+                                    Asosiy qahramon
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="character-editor-item">
+
+                            <div class="character-avatar">
+                                🧑
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Amir
+                                </strong>
+
+                                <span>
+                                    Sirli qahramon
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="character-editor-item">
+
+                            <div class="character-avatar">
+                                👩‍🦰
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Zebo
+                                </strong>
+
+                                <span>
+                                    Do'st
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </aside>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script
+        src="assets/js/story-editor.js"
+    ></script>
+
+
+</body>
+
+</html>

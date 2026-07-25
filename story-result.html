@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My History — Story Result</title>
+
+    <!-- Main CSS -->
+    <link
+        rel="stylesheet"
+        href="assets/css/style.css"
+    >
+
+    <!-- Story Result CSS -->
+    <link
+        rel="stylesheet"
+        href="assets/css/pages/story-result.css"
+    >
+</head>
+
+
+<body class="story-result-page">
+
+    <!-- =========================
+         MAIN CONTAINER
+    ========================== -->
+
+    <main class="story-result-container">
+
+
+        <!-- =========================
+             HEADER
+        ========================== -->
+
+        <header class="story-result-header">
+
+            <div class="story-result-title-box">
+
+                <div class="story-result-subtitle">
+                    ✨ MY HISTORY AI STORY
+                </div>
+
+                <h1 class="story-result-title">
+                    Sizning hikoyangiz tayyor!
+                </h1>
+
+                <p class="story-result-description">
+                    Sun'iy intellekt yordamida yaratilgan
+                    noyob hikoyangizni kashf eting.
+                    Qahramonlar, voqealar va sarguzashtlar
+                    sizni kutmoqda.
+                </p>
+
+            </div>
+
+
+            <!-- HEADER ACTIONS -->
+
+            <div class="story-result-actions">
+
+                <button
+                    class="story-result-btn story-result-btn-secondary"
+                    onclick="goBack()"
+                >
+                    ← Orqaga
+                </button>
+
+                <button
+                    class="story-result-btn story-result-btn-primary"
+                    onclick="saveStory()"
+                >
+                    💾 Saqlash
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =========================
+             STORY HERO
+        ========================== -->
+
+        <section class="story-result-hero">
+
+
+            <!-- STORY COVER -->
+
+            <div class="story-result-cover">
+
+                <div class="story-result-cover-content">
+
+                    <span class="story-result-cover-badge">
+                        ✨ AI Generated Story
+                    </span>
+
+                    <h2 class="story-result-cover-title">
+                        Sirli Olamga Sayohat
+                    </h2>
+
+                    <p class="story-result-cover-text">
+                        Bir kuni oddiy qiz o'z hayotidagi
+                        eng katta sarguzashtga duch keladi.
+                        U sirli dunyoga tushib qoladi va
+                        o'z taqdirini o'zgartiradigan
+                        ajoyib voqealarni boshdan kechiradi.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- STORY INFORMATION -->
+
+            <div class="story-result-info">
+
+                <h3 class="story-result-info-title">
+                    📚 Story ma'lumotlari
+                </h3>
+
+
+                <div class="story-result-info-list">
+
+
+                    <div class="story-result-info-item">
+
+                        <span class="story-result-info-label">
+                            Janr
+                        </span>
+
+                        <span class="story-result-info-value">
+                            Fantasy
+                        </span>
+
+                    </div>
+
+
+                    <div class="story-result-info-item">
+
+                        <span class="story-result-info-label">
+                            Til
+                        </span>
+
+                        <span class="story-result-info-value">
+                            O'zbek tili
+                        </span>
+
+                    </div>
+
+
+                    <div class="story-result-info-item">
+
+                        <span class="story-result-info-label">
+                            Format
+                        </span>
+
+                        <span class="story-result-info-value">
+                            Anime / Cartoon
+                        </span>
+
+                    </div>
+
+
+                    <div class="story-result-info-item">
+
+                        <span class="story-result-info-label">
+                            Davomiyligi
+                        </span>
+
+                        <span class="story-result-info-value">
+                            12 qism
+                        </span>
+
+                    </div>
+
+
+                    <div class="story-result-info-item">
+
+                        <span class="story-result-info-label">
+                            Yaratilgan
+                        </span>
+
+                        <span class="story-result-info-value">
+                            Bugun
+                        </span>
+
+                    </div>
+
+
+                    <div class="story-result-info-item">
+
+                        <span class="story-result-info-label">
+                            Holati
+                        </span>
+
+                        <span class="story-result-info-value story-result-status">
+                            ● Tayyor
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             STORY CHAPTERS
+        ========================== -->
+
+        <section class="story-result-section">
+
+
+            <div class="story-result-section-header">
+
+                <div>
+
+                    <h2 class="story-result-section-title">
+                        📖 Hikoya qismlari
+                    </h2>
+
+                    <p class="story-result-section-description">
+                        Hikoyangizning asosiy qismlari
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="story-result-chapters">
+
+
+                <!-- CHAPTER 1 -->
+
+                <article class="story-result-chapter">
+
+                    <div class="story-result-chapter-number">
+                        01
+                    </div>
+
+                    <h3 class="story-result-chapter-title">
+                        Sirli boshlanish
+                    </h3>
+
+                    <p class="story-result-chapter-text">
+                        Qahramonimiz oddiy hayot kechirayotgan
+                        paytda sirli hodisaga duch keladi.
+                        Bu voqea uning butun hayotini
+                        o'zgartirib yuboradi.
+                    </p>
+
+                </article>
+
+
+
+                <!-- CHAPTER 2 -->
+
+                <article class="story-result-chapter">
+
+                    <div class="story-result-chapter-number">
+                        02
+                    </div>
+
+                    <h3 class="story-result-chapter-title">
+                        Sirli dunyo
+                    </h3>
+
+                    <p class="story-result-chapter-text">
+                        Qahramon yangi va noma'lum dunyoga
+                        tushib qoladi. Bu yerda u yangi
+                        do'stlar va kuchli dushmanlar bilan
+                        uchrashadi.
+                    </p>
+
+                </article>
+
+
+
+                <!-- CHAPTER 3 -->
+
+                <article class="story-result-chapter">
+
+                    <div class="story-result-chapter-number">
+                        03
+                    </div>
+
+                    <h3 class="story-result-chapter-title">
+                        Taqdir tanlovi
+                    </h3>
+
+                    <p class="story-result-chapter-text">
+                        Qahramon oldida muhim tanlov paydo
+                        bo'ladi. U o'zining haqiqiy kuchini
+                        anglab, kelajak uchun kurashishga
+                        qaror qiladi.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CHARACTERS
+        ========================== -->
+
+        <section class="story-result-section">
+
+
+            <div class="story-result-section-header">
+
+                <div>
+
+                    <h2 class="story-result-section-title">
+                        👥 Asosiy qahramonlar
+                    </h2>
+
+                    <p class="story-result-section-description">
+                        Hikoyadagi asosiy personajlar
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="story-result-characters">
+
+
+                <!-- CHARACTER 1 -->
+
+                <article class="story-result-character">
+
+                    <div class="story-result-character-image">
+
+                        <img
+                            src="assets/images/characters/character-1.jpg"
+                            alt="Asosiy qahramon"
+                        >
+
+                    </div>
+
+                    <div class="story-result-character-content">
+
+                        <h3 class="story-result-character-name">
+                            Laylo
+                        </h3>
+
+                        <div class="story-result-character-role">
+                            Asosiy qahramon
+                        </div>
+
+                        <p class="story-result-character-description">
+                            Jasur va mehribon qiz.
+                            U noma'lum dunyoning sirlarini
+                            ochishga harakat qiladi.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- CHARACTER 2 -->
+
+                <article class="story-result-character">
+
+                    <div class="story-result-character-image">
+
+                        <img
+                            src="assets/images/characters/character-2.jpg"
+                            alt="Sirli qahramon"
+                        >
+
+                    </div>
+
+                    <div class="story-result-character-content">
+
+                        <h3 class="story-result-character-name">
+                            Amir
+                        </h3>
+
+                        <div class="story-result-character-role">
+                            Sirli qahramon
+                        </div>
+
+                        <p class="story-result-character-description">
+                            O'tmishi sirli bo'lgan
+                            kuchli jangchi.
+                            U Layloga yordam beradi.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- CHARACTER 3 -->
+
+                <article class="story-result-character">
+
+                    <div class="story-result-character-image">
+
+                        <img
+                            src="assets/images/characters/character-3.jpg"
+                            alt="Do'st qahramon"
+                        >
+
+                    </div>
+
+                    <div class="story-result-character-content">
+
+                        <h3 class="story-result-character-name">
+                            Zebo
+                        </h3>
+
+                        <div class="story-result-character-role">
+                            Eng yaqin do'st
+                        </div>
+
+                        <p class="story-result-character-description">
+                            Quvnoq va aqlli qiz.
+                            U qahramonimizga
+                            qiyin vaziyatlarda yordam beradi.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- CHARACTER 4 -->
+
+                <article class="story-result-character">
+
+                    <div class="story-result-character-image">
+
+                        <img
+                            src="assets/images/characters/character-4.jpg"
+                            alt="Asosiy dushman"
+                        >
+
+                    </div>
+
+                    <div class="story-result-character-content">
+
+                        <h3 class="story-result-character-name">
+                            Qorong'u Hukmdor
+                        </h3>
+
+                        <div class="story-result-character-role">
+                            Asosiy antagonist
+                        </div>
+
+                        <p class="story-result-character-description">
+                            Sirli dunyoni boshqaruvchi
+                            kuchli va xavfli hukmdor.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             TIMELINE
+        ========================== -->
+
+        <section class="story-result-section">
+
+    <div class="story-result-section-header">
+
+        <div>
+
+            <h2 class="story-result-section-title">
+                📖 Hikoya
+            </h2>
+
+            <p class="story-result-section-description">
+                Siz yaratgan hikoyaning mazmuni
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="story-result-story-content">
+
+        Bir kuni Laylo oddiy kunlardan birini
+        o'tkazayotgan edi.
+
+        Ammo u o'rmonda sirli yorug'likni
+        ko'rib qoldi.
+
+        Laylo bu sirli yorug'lik ortidan
+        borishga qaror qildi.
+
+        U bilmagan holda, bu qaror uning
+        hayotini butunlay o'zgartirib
+        yuboradigan sarguzashtning
+        boshlanishi edi...
+
+    </div>
+
+</section>
+
+
+
+        <!-- =========================
+             CTA
+        ========================== -->
+
+        <section class="story-result-cta">
+
+            <h2 class="story-result-cta-title">
+                Hikoyangizni davom ettiring 🚀
+            </h2>
+
+            <p class="story-result-cta-text">
+                Siz ushbu hikoyani saqlashingiz,
+                yangi qism yaratishingiz yoki
+                o'z hikoyangizni qaytadan yaratishingiz mumkin.
+            </p>
+
+
+            <div class="story-result-actions">
+
+                <button
+                    class="story-result-btn story-result-btn-primary"
+                    onclick="continueStory()"
+                >
+                    ▶ Hikoyani davom ettirish
+                </button>
+
+                <button
+                    class="story-result-btn story-result-btn-secondary"
+                    onclick="createNewStory()"
+                >
+                    ✨ Yangi hikoya yaratish
+                </button>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        function goBack() {
+            window.history.back();
+        }
+
+
+        function saveStory() {
+
+            alert(
+                "Hikoya muvaffaqiyatli saqlandi! ❤️"
+            );
+
+        }
+
+
+        function continueStory() {
+
+            alert(
+                "Hikoyani davom ettirish funksiyasi tez orada ishga tushadi."
+            );
+
+        }
+
+
+        function createNewStory() {
+
+            window.location.href =
+                "create-story.html";
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

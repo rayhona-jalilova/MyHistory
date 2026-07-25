@@ -1,0 +1,1744 @@
+/* =========================================================
+   MY HISTORY — STORY RESULT PAGE
+   Version: 2.0
+   Compatible with story-result.html
+========================================================= */
+
+
+/* =========================================================
+   1. ROOT VARIABLES
+========================================================= */
+
+:root {
+
+    --primary: #7c3aed;
+    --primary-light: #8b5cf6;
+    --primary-dark: #6d28d9;
+
+    --secondary: #ec4899;
+
+    --blue: #3b82f6;
+    --green: #10b981;
+    --orange: #f59e0b;
+    --red: #ef4444;
+
+    --dark: #171421;
+    --dark-2: #211c2d;
+
+    --text: #272333;
+    --text-light: #6f6a7d;
+    --text-muted: #9a95a7;
+
+    --white: #ffffff;
+
+    --background: #f8f7fb;
+    --card: #ffffff;
+
+    --border: #ebe8f1;
+
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 22px;
+
+    --shadow-sm:
+        0 4px 15px rgba(35, 24, 56, 0.04);
+
+    --shadow-md:
+        0 10px 35px rgba(35, 24, 56, 0.08);
+
+    --shadow-lg:
+        0 20px 60px rgba(35, 24, 56, 0.12);
+
+    --transition:
+        all 0.3s ease;
+
+}
+
+
+/* =========================================================
+   2. RESET
+========================================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    font-family:
+        "Inter",
+        sans-serif;
+
+    background:
+        var(--background);
+
+    color:
+        var(--text);
+
+    min-height:
+        100vh;
+
+    overflow-x:
+        hidden;
+
+}
+
+
+button {
+
+    font-family:
+        inherit;
+
+    border:
+        none;
+
+    cursor:
+        pointer;
+
+}
+
+
+a {
+
+    text-decoration:
+        none;
+
+    color:
+        inherit;
+
+}
+
+
+img {
+
+    display:
+        block;
+
+    max-width:
+        100%;
+
+}
+
+
+/* =========================================================
+   3. MAIN CONTAINER
+========================================================= */
+
+.story-result-container {
+
+    width:
+        100%;
+
+    max-width:
+        1450px;
+
+    min-height:
+        100vh;
+
+    margin:
+        0 auto;
+
+    padding:
+        35px;
+
+}
+
+
+/* =========================================================
+   4. HEADER
+========================================================= */
+
+.story-result-header {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        25px;
+
+    margin-bottom:
+        30px;
+
+}
+
+
+.story-result-title-box {
+
+    max-width:
+        700px;
+
+}
+
+
+.story-result-subtitle {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    margin-bottom:
+        9px;
+
+    color:
+        var(--primary);
+
+    font-size:
+        9px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        1.5px;
+
+}
+
+
+.story-result-title {
+
+    margin-bottom:
+        10px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        34px;
+
+    line-height:
+        1.2;
+
+}
+
+
+.story-result-description {
+
+    max-width:
+        600px;
+
+    color:
+        var(--text-light);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.7;
+
+}
+
+
+/* =========================================================
+   5. HEADER BUTTONS
+========================================================= */
+
+.story-result-actions {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    flex-wrap:
+        wrap;
+
+}
+
+
+.story-result-btn {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        8px;
+
+    min-height:
+        43px;
+
+    padding:
+        0 17px;
+
+    border-radius:
+        11px;
+
+    font-size:
+        10px;
+
+    font-weight:
+        600;
+
+    transition:
+        var(--transition);
+
+}
+
+
+.story-result-btn-primary {
+
+    color:
+        var(--white);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    box-shadow:
+        0 9px 22px
+        rgba(124, 58, 237, 0.2);
+
+}
+
+
+.story-result-btn-primary:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 14px 28px
+        rgba(124, 58, 237, 0.25);
+
+}
+
+
+.story-result-btn-secondary {
+
+    color:
+        var(--text-light);
+
+    background:
+        var(--white);
+
+    border:
+        1px solid
+        var(--border);
+
+}
+
+
+.story-result-btn-secondary:hover {
+
+    color:
+        var(--primary);
+
+    background:
+        #f7f3ff;
+
+    border-color:
+        #dcd0f3;
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* =========================================================
+   6. STORY HERO
+========================================================= */
+
+.story-result-hero {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        minmax(0, 1.7fr)
+        minmax(280px, 0.8fr);
+
+    gap:
+        25px;
+
+    margin-bottom:
+        30px;
+
+}
+
+
+/* =========================================================
+   7. STORY COVER
+========================================================= */
+
+.story-result-cover {
+
+    position:
+        relative;
+
+    min-height:
+        390px;
+
+    display:
+        flex;
+
+    align-items:
+        flex-end;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        24px;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255,255,255,0.18),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(255,255,255,0.12),
+            transparent 25%
+        ),
+
+        linear-gradient(
+            135deg,
+            #4c1d95,
+            #7c3aed 45%,
+            #ec4899
+        );
+
+    box-shadow:
+        0 20px 50px
+        rgba(124, 58, 237, 0.18);
+
+}
+
+
+.story-result-cover::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        280px;
+
+    height:
+        280px;
+
+    top:
+        -120px;
+
+    right:
+        -80px;
+
+    border:
+        35px solid
+        rgba(255,255,255,0.08);
+
+    border-radius:
+        50%;
+
+}
+
+
+.story-result-cover::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 25%,
+            rgba(15, 8, 30, 0.72) 100%
+        );
+
+}
+
+
+.story-result-cover-content {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    width:
+        100%;
+
+    padding:
+        35px;
+
+    color:
+        var(--white);
+
+}
+
+
+.story-result-cover-badge {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    padding:
+        7px 10px;
+
+    margin-bottom:
+        13px;
+
+    border-radius:
+        7px;
+
+    background:
+        rgba(255,255,255,0.16);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
+
+    backdrop-filter:
+        blur(10px);
+
+    font-size:
+        8px;
+
+    font-weight:
+        700;
+
+}
+
+
+.story-result-cover-title {
+
+    max-width:
+        600px;
+
+    margin-bottom:
+        10px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        34px;
+
+    line-height:
+        1.2;
+
+}
+
+
+.story-result-cover-text {
+
+    max-width:
+        600px;
+
+    color:
+        rgba(255,255,255,0.82);
+
+    font-size:
+        11px;
+
+    line-height:
+        1.8;
+
+}
+
+
+/* =========================================================
+   8. STORY INFORMATION
+========================================================= */
+
+.story-result-info {
+
+    padding:
+        25px;
+
+    border-radius:
+        20px;
+
+    background:
+        var(--white);
+
+    border:
+        1px solid
+        var(--border);
+
+    box-shadow:
+        var(--shadow-sm);
+
+}
+
+
+.story-result-info-title {
+
+    margin-bottom:
+        20px;
+
+    font-size:
+        17px;
+
+}
+
+
+.story-result-info-list {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+}
+
+
+.story-result-info-item {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        15px;
+
+    padding:
+        13px 0;
+
+    border-bottom:
+        1px solid
+        #f2f0f5;
+
+}
+
+
+.story-result-info-item:last-child {
+
+    border-bottom:
+        none;
+
+}
+
+
+.story-result-info-label {
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        10px;
+
+}
+
+
+.story-result-info-value {
+
+    color:
+        var(--text);
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    text-align:
+        right;
+
+}
+
+
+.story-result-status {
+
+    color:
+        var(--green);
+
+}
+
+
+/* =========================================================
+   9. GENERAL SECTION
+========================================================= */
+
+.story-result-section {
+
+    padding:
+        25px;
+
+    margin-bottom:
+        25px;
+
+    border-radius:
+        20px;
+
+    background:
+        var(--white);
+
+    border:
+        1px solid
+        var(--border);
+
+    box-shadow:
+        var(--shadow-sm);
+
+}
+
+
+.story-result-section-header {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    margin-bottom:
+        22px;
+
+}
+
+
+.story-result-section-title {
+
+    margin-bottom:
+        5px;
+
+    font-size:
+        19px;
+
+    font-weight:
+        700;
+
+}
+
+
+.story-result-section-description {
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        9px;
+
+}
+
+
+/* =========================================================
+   10. CHAPTERS
+========================================================= */
+
+.story-result-chapters {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        15px;
+
+}
+
+
+.story-result-chapter {
+
+    position:
+        relative;
+
+    padding:
+        22px;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #faf9fc,
+            #f7f3ff
+        );
+
+    border:
+        1px solid
+        #eeeaf4;
+
+    transition:
+        var(--transition);
+
+}
+
+
+.story-result-chapter:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        #ded1f4;
+
+    box-shadow:
+        var(--shadow-md);
+
+}
+
+
+.story-result-chapter-number {
+
+    width:
+        42px;
+
+    height:
+        42px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    margin-bottom:
+        17px;
+
+    border-radius:
+        12px;
+
+    color:
+        var(--primary);
+
+    background:
+        #eee7ff;
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+}
+
+
+.story-result-chapter-title {
+
+    margin-bottom:
+        9px;
+
+    font-size:
+        13px;
+
+}
+
+
+.story-result-chapter-text {
+
+    color:
+        var(--text-light);
+
+    font-size:
+        9px;
+
+    line-height:
+        1.7;
+
+}
+
+
+/* =========================================================
+   11. CHARACTERS
+========================================================= */
+
+.story-result-characters {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:
+        15px;
+
+}
+
+
+.story-result-character {
+
+    overflow:
+        hidden;
+
+    border-radius:
+        16px;
+
+    background:
+        #faf9fc;
+
+    border:
+        1px solid
+        var(--border);
+
+    transition:
+        var(--transition);
+
+}
+
+
+.story-result-character:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        var(--shadow-md);
+
+}
+
+
+.story-result-character-image {
+
+    position:
+        relative;
+
+    height:
+        230px;
+
+    overflow:
+        hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eee7ff,
+            #ffeaf5
+        );
+
+}
+
+
+.story-result-character-image::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 60%,
+            rgba(20, 10, 35, 0.15)
+        );
+
+}
+
+
+.story-result-character-image img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    transition:
+        transform
+        0.5s
+        ease;
+
+}
+
+
+.story-result-character:hover
+.story-result-character-image img {
+
+    transform:
+        scale(1.05);
+
+}
+
+
+.story-result-character-content {
+
+    padding:
+        17px;
+
+}
+
+
+.story-result-character-name {
+
+    margin-bottom:
+        5px;
+
+    font-size:
+        13px;
+
+}
+
+
+.story-result-character-role {
+
+    display:
+        inline-block;
+
+    margin-bottom:
+        10px;
+
+    padding:
+        5px 8px;
+
+    border-radius:
+        6px;
+
+    color:
+        var(--primary);
+
+    background:
+        #f0eaff;
+
+    font-size:
+        8px;
+
+    font-weight:
+        600;
+
+}
+
+
+.story-result-character-description {
+
+    color:
+        var(--text-light);
+
+    font-size:
+        9px;
+
+    line-height:
+        1.7;
+
+}
+
+
+/* =========================================================
+   12. STORY CONTENT
+========================================================= */
+
+.story-result-story-content {
+
+    padding:
+        25px;
+
+    border-radius:
+        15px;
+
+    color:
+        var(--text-light);
+
+    background:
+        linear-gradient(
+            145deg,
+            #faf9fc,
+            #fffaff
+        );
+
+    border:
+        1px solid
+        #f0edf4;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        15px;
+
+    line-height:
+        2;
+
+    white-space:
+        pre-line;
+
+}
+
+
+/* =========================================================
+   13. CTA
+========================================================= */
+
+.story-result-cta {
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    padding:
+        40px;
+
+    margin-top:
+        30px;
+
+    margin-bottom:
+        20px;
+
+    text-align:
+        center;
+
+    border-radius:
+        22px;
+
+    color:
+        var(--white);
+
+    background:
+        linear-gradient(
+            135deg,
+            #5b21b6,
+            #7c3aed 50%,
+            #db2777
+        );
+
+    box-shadow:
+        0 20px 45px
+        rgba(124, 58, 237, 0.2);
+
+}
+
+
+.story-result-cta::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        250px;
+
+    height:
+        250px;
+
+    right:
+        -100px;
+
+    top:
+        -130px;
+
+    border:
+        35px solid
+        rgba(255,255,255,0.08);
+
+    border-radius:
+        50%;
+
+}
+
+
+.story-result-cta::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        180px;
+
+    height:
+        180px;
+
+    left:
+        -90px;
+
+    bottom:
+        -100px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(255,255,255,0.06);
+
+}
+
+
+.story-result-cta-title {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    margin-bottom:
+        10px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        27px;
+
+}
+
+
+.story-result-cta-text {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    max-width:
+        600px;
+
+    margin:
+        0 auto 22px;
+
+    color:
+        rgba(255,255,255,0.78);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.7;
+
+}
+
+
+.story-result-cta
+.story-result-actions {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    justify-content:
+        center;
+
+}
+
+
+.story-result-cta
+.story-result-btn-secondary {
+
+    color:
+        var(--primary);
+
+    background:
+        var(--white);
+
+    border:
+        none;
+
+}
+
+
+/* =========================================================
+   14. ANIMATIONS
+========================================================= */
+
+@keyframes storyResultFadeUp {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(20px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+.story-result-header {
+
+    animation:
+        storyResultFadeUp
+        0.5s
+        ease
+        both;
+
+}
+
+
+.story-result-hero {
+
+    animation:
+        storyResultFadeUp
+        0.6s
+        0.1s
+        ease
+        both;
+
+}
+
+
+.story-result-section {
+
+    animation:
+        storyResultFadeUp
+        0.6s
+        ease
+        both;
+
+}
+
+
+.story-result-cta {
+
+    animation:
+        storyResultFadeUp
+        0.6s
+        ease
+        both;
+
+}
+
+
+/* =========================================================
+   15. RESPONSIVE — 1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .story-result-characters {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* =========================================================
+   16. RESPONSIVE — 1000px
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .story-result-hero {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .story-result-cover {
+
+        min-height:
+            360px;
+
+    }
+
+
+    .story-result-info {
+
+        padding:
+            25px;
+
+    }
+
+
+    .story-result-chapters {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+/* =========================================================
+   17. RESPONSIVE — 700px
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .story-result-container {
+
+        padding:
+            25px 15px;
+
+    }
+
+
+    .story-result-header {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .story-result-title {
+
+        font-size:
+            28px;
+
+    }
+
+
+    .story-result-header
+    .story-result-actions {
+
+        width:
+            100%;
+
+    }
+
+
+    .story-result-header
+    .story-result-btn {
+
+        flex:
+            1;
+
+    }
+
+
+    .story-result-cover {
+
+        min-height:
+            330px;
+
+    }
+
+
+    .story-result-cover-content {
+
+        padding:
+            25px;
+
+    }
+
+
+    .story-result-cover-title {
+
+        font-size:
+            28px;
+
+    }
+
+
+    .story-result-section {
+
+        padding:
+            20px;
+
+    }
+
+
+    .story-result-characters {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .story-result-character-image {
+
+        height:
+            260px;
+
+    }
+
+
+    .story-result-cta {
+
+        padding:
+            30px 20px;
+
+    }
+
+
+    .story-result-cta-title {
+
+        font-size:
+            23px;
+
+    }
+
+
+    .story-result-cta
+    .story-result-actions {
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .story-result-cta
+    .story-result-btn {
+
+        width:
+            100%;
+
+    }
+
+}
+
+
+/* =========================================================
+   18. RESPONSIVE — 450px
+========================================================= */
+
+@media (max-width: 450px) {
+
+    .story-result-container {
+
+        padding:
+            18px 10px;
+
+    }
+
+
+    .story-result-title {
+
+        font-size:
+            24px;
+
+    }
+
+
+    .story-result-description {
+
+        font-size:
+            10px;
+
+    }
+
+
+    .story-result-cover {
+
+        min-height:
+            300px;
+
+        border-radius:
+            18px;
+
+    }
+
+
+    .story-result-cover-content {
+
+        padding:
+            20px;
+
+    }
+
+
+    .story-result-cover-title {
+
+        font-size:
+            24px;
+
+    }
+
+
+    .story-result-cover-text {
+
+        font-size:
+            10px;
+
+    }
+
+
+    .story-result-info {
+
+        padding:
+            20px;
+
+    }
+
+
+    .story-result-info-item {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap:
+            5px;
+
+    }
+
+
+    .story-result-info-value {
+
+        text-align:
+            left;
+
+    }
+
+
+    .story-result-section {
+
+        padding:
+            17px;
+
+    }
+
+
+    .story-result-story-content {
+
+        padding:
+            18px;
+
+        font-size:
+            13px;
+
+    }
+
+
+    .story-result-cta {
+
+        padding:
+            25px 15px;
+
+    }
+
+}
+
+
+/* =========================================================
+   19. SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+
+    width:
+        7px;
+
+    height:
+        7px;
+
+}
+
+
+::-webkit-scrollbar-track {
+
+    background:
+        #f5f3f8;
+
+}
+
+
+::-webkit-scrollbar-thumb {
+
+    border-radius:
+        10px;
+
+    background:
+        #d4cedf;
+
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+
+    background:
+        #b8afc7;
+
+}
+
+
+/* =========================================================
+   END OF STORY RESULT CSS
+========================================================= */
